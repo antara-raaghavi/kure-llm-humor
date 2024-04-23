@@ -1,0 +1,5 @@
+/var/slurmd/spool/slurmd/job29344901/slurm_script: line 14: virtualenv: command not found
+/var/slurmd/spool/slurmd/job29344901/slurm_script: line 15: /env/bin/activate: No such file or directory
+ERROR: Could not find a version that satisfies the requirement gpt-2-simple (from versions: none)
+ERROR: No matching distribution found for gpt-2-simple
+python: can't open file '/n/home04/antara/kure-llm-humor/experiment1.py': [Errno 2] No such file or directory
