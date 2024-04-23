@@ -1,8 +1,3 @@
 checkpoint/
 models/
 
-#stuff that it's complaining about
-checkpoint/run1/model-7.data-00000-of-00001
-checkpoint/run1/model-84.data-00000-of-00001
-checkpoint/run2/model-20.data-00000-of-00001
-models/124M/model.ckpt.data-00000-of-00001
