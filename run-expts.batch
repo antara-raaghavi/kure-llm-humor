@@ -16,4 +16,4 @@ source ~/myenv/bin/activate
 pip install --no-index --upgrade pip
 pip install --no-index -r requirements.txt
 
-python experiment1.py -c ${CONFIG_FILE}
+python experiments1.py -c ${CONFIG_FILE}
