@@ -29,27 +29,27 @@ Strange Days
 Under Siege 2: Dark Territory
 Waterworld
 Drop Zone
-Hunted, The
+The Hunted
 Star Wars: Episode IV - A New Hope
 New York Cop
 Nemesis 2: Nebula
 Natural Born Killers
 Outbreak
-Quick and the Dead, The
-Specialist, The
+The Quick and the Dead
+The Specialist
 Stargate
 Tank Girl
 Star Trek: Generations
 Clear and Present Danger
-Crow, The
+The Crow
 I Love Trouble
 Maverick
-River Wild, The
+The River Wild
 Speed
 Timecop
 True Lies
 Bad Company
-Low Down Dirty Shame, A
+A Low Down Dirty Shame
 Faster Pussycat! Kill! Kill!
 Street Fighter
 Coldblooded
@@ -58,11 +58,11 @@ Highlander III: The Sorcerer
 Beverly Hills Cop III
 Blown Away
 Cliffhanger
-Cowboy Way, The
+The Cowboy Way
 Demolition Man
-Fugitive, The
-Getaway, The
-Good Man in Africa, A
+The Fugitive
+The Getaway
+A Good Man in Africa
 Hard Target
 Heaven & Earth
 Hot Shots! Part Deux
@@ -72,20 +72,20 @@ Jurassic Park
 Last Action Hero
 Menace II Society
 Executive Decision
-Next Karate Kid, The
+The Next Karate Kid
 No Escape
-Perfect World, A
-Program, The
+A Perfect World
+The Program
 Rising Sun
 Romper Stomper
-Shadow, The
+The Shadow
 Striking Distance
 Super Mario Bros.
 Surviving the Game
 Terminal Velocity
-Three Musketeers, The
+The Three Musketeers
 True Romance
-Pagemaster, The
+The Pagemaster
 Terminator 2: Judgment Day
 Tough and Deadly
 Batman
@@ -98,60 +98,60 @@ Bloodsport 2
 Hostile Intentions
 Operation Dumbo Drop
 Solo
-Substitute, The
-Quest, The
-Rock, The
+The Substitute
+The Quest
+The Rock
 Twister
 Barb Wire
-Arrival, The
+The Arrival
 Independence Day
 Eraser
 Daylight
 Fled
 Power 98
 Chain Reaction
-Crow: City of Angels, The
+The Crow: City of Angels
 Escape from L.A.
-Godfather, The
+The Godfather
 Supercop
 Police Story 4: Project S
 Bulletproof
-Adventures of Robin Hood, The
-African Queen, The
+The Adventures of Robin Hood
+The African Queen
 In the Line of Duty 2
 Maximum Risk
 Last Man Standing
 Set It Off
-Glimmer Man, The
+The Glimmer Man
 Die Hard
-Lawnmower Man, The
-Long Kiss Goodnight, The
-Ghost and the Darkness, The
+The Lawnmower Man
+The Long Kiss Goodnight
+The Ghost and the Darkness
 Days of Thunder
 Top Gun
 American Strays
 Bird of Prey
 Palookaville
-Abyss, The
+The Abyss
 Escape from New York
 Johnny 100 Pesos
 Best of the Best 3: No Turning Back
-Shooter, The
+The Shooter
 Star Wars: Episode V - The Empire Strikes Back
-Princess Bride, The
+The Princess Bride
 Raiders of the Lost Ark
 Aliens
-Good, The Bad and The Ugly, The
-Transformers: The Movie, The
+The The Bad and The Ugly Good
+The Transformers: The Movie
 Star Wars: Episode VI - Return of the Jedi
 Alien
 Army of Darkness
-Killer, The
-Blues Brothers, The
-Godfather: Part II, The
+The Killer
+The Blues Brothers
+The Godfather: Part II
 Full Metal Jacket
-Boat, The
-Terminator, The
+The Boat
+The Terminator
 Glory
 Evil Dead II
 Diva
@@ -181,25 +181,25 @@ Jaws
 Jaws 2
 Jaws 3-D
 Mars Attacks!
-Last of the Mohicans, The
+The Last of the Mohicans
 Inside
 Jackie Chan's First Strike
 Beverly Hills Ninja
 Metro
-Stranger, The
+The Stranger
 Dante's Peak
 Best Men
-Saint, The
+The Saint
 Smilla's Sense of Snow
-Devil's Own, The
+The Devil's Own
 Turbo: A Power Rangers Movie
 Double Team
 Anaconda
 Breakdown
 Truth or Consequences, N.M.
 Warriors of Virtue
-Fifth Element, The
-Lost World: Jurassic Park, The
+The Fifth Element
+The Lost World: Jurassic Park
 Con Air
 Speed 2: Cruise Control
 Batman & Robin
@@ -214,15 +214,15 @@ Steel
 Money Talks
 Kull the Conqueror
 Air Force One
-Hunt for Red October, The
-Peacemaker, The
+The Hunt for Red October
+The Peacemaker
 Fire Down Below
 U Turn
 Stag
 Mad City
 Starship Troopers
 Mortal Kombat: Annihilation
-Jackal, The
+The Jackal
 Alien: Resurrection
 Time Tracers
 Tomorrow Never Dies
@@ -232,20 +232,20 @@ Firestorm
 Hard Rain
 Fallen
 Deep Rising
-Replacement Killers, The
+The Replacement Killers
 Blues Brothers 2000
 Tokyo Fist
 King of New York
 Men With Guns
 U.S. Marshalls
 In God's Hands
-Man in the Iron Mask, The
-Player's Club, The
+The Man in the Iron Mask
+The Player's Club
 Lost in Space
 Heaven's Burning
 Mercury Rising
 Mr. Nice Guy
-Big Hit, The
+The Big Hit
 Tarzan and the Lost City
 Black Dog
 Deep Impact
@@ -255,27 +255,27 @@ Out of Sight
 Buffalo 66
 Armageddon
 Lethal Weapon 4
-French Connection, The
+The French Connection
 Rocky
 Lethal Weapon
 Lethal Weapon 2
 Lethal Weapon 3
-Mask of Zorro, The
-Poseidon Adventure, The
+The Mask of Zorro
+The Poseidon Adventure
 Seven Samurai
-Godfather: Part III, The
+The Godfather: Part III
 Saving Private Ryan
 Condorman
-Negotiator, The
-Rocketeer, The
+The Negotiator
+The Rocketeer
 Tron
 Indiana Jones and the Temple of Doom
 Snake Eyes
-Avengers, The
+The Avengers
 Blade
 Wrongfully Accused
 Willow
-Untouchables, The
+The Untouchables
 Knock Off
 Toys
 Master Ninja I
@@ -283,13 +283,13 @@ Wisdom
 Rush Hour
 Six-String Samurai
 Ronin
-Thing, The
+The Thing
 One Tough Cop
 Detroit 9000
 Soldier
-Siege, The
+The Siege
 Runaway Train
-Pope of Greenwich Village, The
+The Pope of Greenwich Village
 Enemy of the State
 Godzilla
 Godzilla
@@ -297,30 +297,30 @@ King Kong vs. Godzilla
 King Kong
 King Kong
 King Kong Lives
-Emerald Forest, The
+The Emerald Forest
 Red Sonja
-View to a Kill, A
+A View to a Kill
 Star Trek: Insurrection
 Rambo: First Blood Part II
 First Blood
 Rambo III
-Jewel of the Nile, The
+The Jewel of the Nile
 Romancing the Stone
 Rocky II
 Rocky III
 Rocky IV
 Rocky V
 Young Sherlock Holmes
-Karate Kid, Part II, The
-Karate Kid III, The
-Thin Red Line, The
+The Part II Karate Kid
+The Karate Kid III
+The Thin Red Line
 Running Scared
 Jumpin' Jack Flash
 52 Pick-Up
 Heartbreak Ridge
 Blood, Guts, Bullets and Octane
 Payback
-Towering Inferno, The
+The Towering Inferno
 Alligator
 Westworld
 Logan's Run
@@ -331,35 +331,35 @@ Conquest of the Planet of the Apes
 Escape from the Planet of the Apes
 Avalanche
 Earthquake
-Corruptor, The
+The Corruptor
 Wing Commander
-Mod Squad, The
-Matrix, The
+The Mod Squad
+The Matrix
 Twin Dragons
 eXistenZ
 Night of the Comet
 Chopping Mall
 Dick Tracy
-Mummy, The
+The Mummy
 Black Mask
 Star Wars: Episode I - The Phantom Menace
 Superman
 Superman II
 Superman III
 Superman IV: The Quest for Peace
-War of the Worlds, The
+The War of the Worlds
 Run Lola Run
 Arachnophobia
 Wild Wild West
 Inspector Gadget
 Deep Blue Sea
 Mystery Men
-Golden Child, The
+The Golden Child
 Assassination
 No Mercy
 Allan Quartermain and the Lost City of Gold
 Wanted: Dead or Alive
-Thomas Crown Affair, The
+The Thomas Crown Affair
 Tequila Sunrise
 Universal Soldier: The Return
 Universal Soldier
@@ -368,8 +368,8 @@ Iron Eagle
 Iron Eagle II
 Aces: Iron Eagle III
 Iron Eagle IV
-Spiders, The
-13th Warrior, The
+The Spiders
+The 13th Warrior
 Chill Factor
 Excalibur
 Operation Condor
@@ -378,57 +378,57 @@ Double Jeopardy
 New Rose Hotel
 Plunkett & MaCleane
 Sanjuro
-Limey, The
+The Limey
 Total Recall
 Drunken Master
-Dirty Dozen, The
+The Dirty Dozen
 Goldfinger
 From Russia with Love
 Dr. No
-Fistful of Dollars, A
+A Fistful of Dollars
 Someone to Watch Over Me
-Omega Code, The
+The Omega Code
 Robocop
 Robocop 2
 For Your Eyes Only
 Licence to Kill
 Live and Let Die
 Thunderball
-Princess Mononoke, The
+The Princess Mononoke
 Falling Down
 Nighthawks
-Longest Day, The
-World Is Not Enough, The
+The Longest Day
+The World Is Not Enough
 Midnight Run
 Backdraft
 End of Days
-Sea Wolves, The
+The Sea Wolves
 Tarzan the Fearless
-7th Voyage of Sinbad, The
+The 7th Voyage of Sinbad
 Boiling Point
 Montana
-Presidio, The
+The Presidio
 Loaded Weapon 1
 Patriot Games
-Bodyguard, The
+The Bodyguard
 Hard-Boiled
 Man Bites Dog
 Mariachi, El
 Stop! Or My Mom Will Shoot
 Single White Female
-Boondock Saints, The
+The Boondock Saints
 Knockout
 Minnie and Moskowitz
 Pitch Black
-Kid, The
-Big Trees, The
+The Kid
+The Big Trees
 Reindeer Games
 Where Eagles Dare
-Bridge at Remagen, The
-Taking of Pelham One Two Three, The
+The Bridge at Remagen
+The Taking of Pelham One Two Three
 Let's Get Harry
 Titanic
-Night to Remember, A
+A Night to Remember
 Captain Horatio Hornblower
 Thelma & Louise
 Death Wish
@@ -449,8 +449,8 @@ Taffin
 Predator
 Third World Cop
 U-571
-Crow: Salvation, The
-Hidden, The
+The Crow: Salvation
+The Hidden
 Gladiator
 Breathless
 Battlefield Earth
@@ -458,14 +458,14 @@ Mission: Impossible 2
 Shanghai Noon
 Flying Tigers
 On Her Majesty's Secret Service
-Spy Who Loved Me, The
+The Spy Who Loved Me
 Moonraker
-Man with the Golden Gun, The
-Fighting Seabees, The
-Guns of Navarone, The
+The Man with the Golden Gun
+The Fighting Seabees
+The Guns of Navarone
 Rent-A-Cop
 Predator 2
-Running Man, The
+The Running Man
 Mad Max
 Mad Max 2
 Mad Max Beyond Thunderdome
@@ -477,15 +477,15 @@ Assault on Precinct 13
 Shaft
 Big Trouble in Little China
 Shaft
-Patriot, The
-Perfect Storm, The
+The Patriot
+The Perfect Storm
 F/X
 F/X 2
 Missing in Action
 Missing in Action 2: The Beginning
 Braddock: Missing in Action III
 Thunderbolt and Lightfoot
-Golden Voyage of Sinbad, The
+The Golden Voyage of Sinbad
 Shaft in Africa
 Shaft's Big Score!
 X-Men
@@ -497,7 +497,7 @@ Kelly's Heroes
 Air America
 Godzilla 2000
 Supergirl
-Art of War, The
+The Art of War
 Highlander: Endgame
 Bait
 Get Carter
