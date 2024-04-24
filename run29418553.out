@@ -1,0 +1,454 @@
+Requirement already satisfied: pip in /n/home04/antara/myenv/lib/python3.10/site-packages (22.3.1)
+Requirement already satisfied: gpt_2_simple in /n/home04/antara/myenv/lib/python3.10/site-packages (0.8.1)
+Requirement already satisfied: tensorflow>=2.5.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (2.16.1)
+Requirement already satisfied: regex in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (2024.4.16)
+Requirement already satisfied: requests in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (2.31.0)
+Requirement already satisfied: tqdm in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (4.66.2)
+Requirement already satisfied: numpy in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (1.26.4)
+Requirement already satisfied: toposort in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (1.10)
+Requirement already satisfied: tensorboard<2.17,>=2.16 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (2.16.2)
+Requirement already satisfied: opt-einsum>=2.3.2 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (3.3.0)
+Requirement already satisfied: six>=1.12.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (1.16.0)
+Requirement already satisfied: protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<5.0.0dev,>=3.20.3 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (4.25.3)
+Requirement already satisfied: keras>=3.0.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (3.3.2)
+Requirement already satisfied: setuptools in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (65.5.0)
+Requirement already satisfied: h5py>=3.10.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (3.11.0)
+Requirement already satisfied: flatbuffers>=23.5.26 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (24.3.25)
+Requirement already satisfied: gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (0.5.4)
+Requirement already satisfied: termcolor>=1.1.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (2.4.0)
+Requirement already satisfied: ml-dtypes~=0.3.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (0.3.2)
+Requirement already satisfied: packaging in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (24.0)
+Requirement already satisfied: tensorflow-io-gcs-filesystem>=0.23.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (0.36.0)
+Requirement already satisfied: libclang>=13.0.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (18.1.1)
+Requirement already satisfied: google-pasta>=0.1.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (0.2.0)
+Requirement already satisfied: absl-py>=1.0.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (2.1.0)
+Requirement already satisfied: typing-extensions>=3.6.6 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (4.11.0)
+Requirement already satisfied: wrapt>=1.11.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (1.16.0)
+Requirement already satisfied: astunparse>=1.6.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (1.6.3)
+Requirement already satisfied: grpcio<2.0,>=1.24.3 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (1.62.2)
+Requirement already satisfied: idna<4,>=2.5 in /n/home04/antara/myenv/lib/python3.10/site-packages (from requests->gpt_2_simple) (3.7)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from requests->gpt_2_simple) (2.2.1)
+Requirement already satisfied: charset-normalizer<4,>=2 in /n/home04/antara/myenv/lib/python3.10/site-packages (from requests->gpt_2_simple) (3.3.2)
+Requirement already satisfied: certifi>=2017.4.17 in /n/home04/antara/myenv/lib/python3.10/site-packages (from requests->gpt_2_simple) (2024.2.2)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from astunparse>=1.6.0->tensorflow>=2.5.1->gpt_2_simple) (0.43.0)
+Requirement already satisfied: optree in /n/home04/antara/myenv/lib/python3.10/site-packages (from keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (0.11.0)
+Requirement already satisfied: rich in /n/home04/antara/myenv/lib/python3.10/site-packages (from keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (13.7.1)
+Requirement already satisfied: namex in /n/home04/antara/myenv/lib/python3.10/site-packages (from keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (0.0.8)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorboard<2.17,>=2.16->tensorflow>=2.5.1->gpt_2_simple) (0.7.2)
+Requirement already satisfied: werkzeug>=1.0.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorboard<2.17,>=2.16->tensorflow>=2.5.1->gpt_2_simple) (3.0.2)
+Requirement already satisfied: markdown>=2.6.8 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorboard<2.17,>=2.16->tensorflow>=2.5.1->gpt_2_simple) (3.6)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from werkzeug>=1.0.1->tensorboard<2.17,>=2.16->tensorflow>=2.5.1->gpt_2_simple) (2.1.5)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from rich->keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (2.17.2)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from rich->keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (3.0.0)
+Requirement already satisfied: mdurl~=0.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from markdown-it-py>=2.2.0->rich->keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (0.1.2)
+romance_movies.txt
+Loading checkpoint models/124M/model.ckpt
+Loading dataset...
+dataset has 2307 tokens
+Training...
+[5 | 565.00] loss=3.16 avg=3.16
+[10 | 917.57] loss=2.40 avg=2.78
+======== SAMPLE 1 ========
+aving to see the full season premiere of "The Big Lebowski."
+
+On Monday morning (February 22nd), I will be back on set with this blog with a preview of the full season finale of "The Big Lebowski," which I hope you enjoy.
+
+The Big Lebowski is a big deal. It is one of my most beloved shows. I've watched a few of them and I knew I would love to watch more, but now I need time to watch the Big Lebowski and watch more. I've just been to one and I'm not sure we will see a complete run. I hope to see this show a lot more in the future.
+
+My thoughts on the episode.
+
+It was funny at first, because the last scene was about to go into a bit of spoiler territory when I got home. I read a review by writer Bill Peeples in The New Yorker. It's very very clear that I wasn't watching anything in this episode. I don't like spoilers and if you're like me, you'll know you aren't watching The Big Lebowski. The Big Lebowski is all well and good, it's just we get a little bit of that in this episode. The Big Lebowski just comes back up from the dead and I'm glad I was there for the finale.
+
+But what the heck was that about?
+
+Forgive me if this is so off base, I think it was. It was a nice surprise that they didn't spoil this. There was no really great plot, and there were a couple of neat scenes where I played with a couple of guns and it just made me smile, I've known some pretty bad guys, and a couple of a few, let's just say, weird angles on some of our characters. For a while it just was…I'm not going to get into that, as I was not even on set, but I'm in love with it.
+
+A lot of characters have interesting journeys and adventures and adventures with different personalities. I've always loved the idea of the book, I've always loved it in the books. So there was definitely at least one or two of those.
+
+That was the thing that made me fall in love in episode two. I remember thinking, "Hey, I've never seen a book like this," and I thought, "Oh no, I can't believe we're on the same episode." And I just wanted to keep on feeling good about this. I think the scene where we get into a car when we are out of New York has that same feeling for me. It just felt very good.
+
+I never really saw the rest of this season.
+
+There were some really great moments of the entire season.
+
+I loved all of the characters, whether they were characters from The Big Lebowski to the present day.
+
+The Big Lebowski was one of the best and most compelling ones I did. And they have to take that in.
+
+That was just the first of many awesome moments in the season.
+
+And I love this part a lot, and it was pretty exciting. It was like the same ending I'd been looking for. And I've still got a bunch of things that I didn't understand.
+
+So the last four episodes of "The Big Lebowski," or the last four episodes of the show, and even the finale, or anything like that, was really cool. I think that's what gave me an opportunity to really get into the show.
+
+The last three episodes of "The Big Lebowski" I've had to put away and just focus on just sitting in jail and watching the credits. That was a little bit different from the finale, but I like watching it.
+
+In the last episode of "The Big Lebowski" I was just being a lot more interested in what he was doing and trying to figure out how he got what he needed from his life. I was reading a blog and I'm just a pretty good author; I know some folks that get this.
+
+So I ended up doing that, and this story is just about the journey, a journey of getting what you need. There are two things that I'm more or less familiar with, just about a lot of these books: The Great American Novel and The Last Supper. I just read The Great American Novel.
+
+When they're done I'll write a short story for The Great American Novel and I'll be done with it. That's the thing about that. It's that it's all over the place.
+
+So these books are great characters, and I've read a lot of great writers, and what I've liked and disliked about them is the way they've come across and what they're looking for in a writer. All of these characters are on a different level.
+
+So let's get into the stuff.
+
+
+
+[15 | 1274.60] loss=1.76 avg=2.44
+[20 | 1533.16] loss=1.34 avg=2.16
+Saving checkpoint/run romance_movies.txt/model-20
+======== SAMPLE 1 ========
+celona, Spain.
+10. The Last of the Mohicans
+11. Black Cat Fire
+12. Purple Rain
+13. The Wings of the Dove
+14. Blue Sky
+15. Love in the Inger-Dolby Sea
+16. Cinderella: A Tale of Love
+17. I've Got Mail For Trades
+18. I Love You, I Love You Not
+19. Lady and the Tramp
+20. You've Got Mail For Telling You…
+21. I've Had It
+22. Cinderella: A Tale of Courage
+23. Cinderella: A Tale of Life
+24. I Love You, I Love You Not
+25. I Love You, Not
+26. Romeo and Juliet
+27. Romeo and Juliet
+28. Romeo and Me
+29. The Beautician and the Beast
+30. I Love You, I May Cry
+Next Steps: A Life Less Ordinary
+31. I Love You, You May Cry
+Lolita
+Tessie Malle
+An Affair to Cine Love
+An Affair to Cine Love
+Love Got Your Back
+The MatchMaker
+My Fair Lady
+She's Not Dead
+Excalibur
+A Smile Less Tint
+Blame It on Rio
+Splash
+Chasing Amy
+A Man of Many Loyalties
+From Here
+A Smile Like Yours
+About an African
+Return to Paradise
+The Art of Cats & Dogs
+Telling You
+Love in a Strange Land
+Love in the North
+She Loves You, Don't Touch Me!
+The Theory of Flight
+Romance
+The Graduate
+Rendezvous in Cairo
+Love at First Sight
+She Loves You, Don't Cry
+Twister
+Love and Other Luciliaries
+For Love in Bloom
+Mrs. Dalloway
+I Love You, Don't Touch Me!
+Romancing the Stone
+Wings of Desire
+Out on the Catan
+Shall-Next-Be
+Thee-Twilight Girl
+Romancing the Stone II
+Telling You
+Out of Sight
+Emma
+The Last of the Mohicans
+The Wings of the Dove
+The Wedding Singer
+Kissing a Fool
+Leather Jacket Love
+Bliss
+From Here to Eternity
+Pretty in Pink
+Top Hat
+Brassed Off
+The Man in the Iron Mask
+Dreaming of Winston
+Bourne
+Roseanna's Grave
+Kissing a Fool
+Kissing a Fool Lucie
+A Life Less Ordinary
+The Chambermaid on the Titanic
+The Beautician and the Beast
+I Love You, Don't Touch Me!
+The Tango Lesson
+I Love You, Don't Touch Me!
+Shooting Fish
+Shooting Fish Lucie
+High Art
+West Side Story
+Can't Hardly Wait
+The Glass Bottom Story
+Out of Sight
+The Theory of Flight
+Dreaming of the Seven Dwarves
+Out of Africa
+The Perfect Guy
+Finding African
+Love
+The Perfect Guy Vanishes
+Bliss
+A Smile Like Yours
+High Art
+Telling You: A True Story
+Rough Magic
+Woo
+The Crying Game
+High Art
+The Other Sister
+Dreaming of the Sea
+Pretty in Pink
+The Wedding Singer
+Splash
+Run!
+Out of Sight
+The Mask of Zorro
+B. Monkey
+West Side Story
+High Art
+The Graduate
+The Other Sister
+Out of Sight
+Return to Africa
+The Chamber of Secrets
+City of Angels
+L.A. Story
+City of Angels
+Out of Africa
+Blame It on Rio
+Out of Sight
+City of Angels
+Excalibur
+City of Angels
+The Wedding Singer
+City of Angels
+My Best Fan
+The Ticket of the Irrepressible Dove
+High Art
+The Incredibly Ordinary
+The Incredibly Ordinary Joe
+City of Angels
+Rendezvous in Cairo
+Out of Africa
+Rendezvous in the Arctic Circle
+City of Angels
+No Small Affair
+City of Angels
+City of Angels
+Innocents Has Sight
+Violets Are Blue
+City of Angels
+Dream for an Insomniac
+Still Breathing
+The Other Sister
+A Farewell to Arms
+The Cat in the Hat
+A Quiet Less Affection
+When the Cats Away
+A Hard Place
+Still Breathing
+The Wedding Singer
+City of Angels
+City of Angels
+The Big Blue
+City of Angels
+City of Angels
+No. 2
+City Hall
+The Pillow Book
+City Hall
+My Son the Fanatic
+The Cat in the Box
+Kneading for Paris
+Excalibur
+Excalibur (Lolita)
+Shampoo
+The Cat in the Iron Hat
+City of Angels
+City of Angels
+City of Angels
+The Cat in the Iron Chair
+Kneading for Paris
+Afterglow
+First Blood
+City of Angels
+
+[25 | 1892.99] loss=1.19 avg=1.96
+[30 | 2150.79] loss=1.08 avg=1.81
+======== SAMPLE 1 ========
+ieves, Leif Weintraub, and the Jungle Book. For a while it looked like The Fantastic and the Womanizer. I think we've seen this many on this blog, for good/bad purposes. But I've often wondered: Is this why we've been seeing Shakespeare in Modern Love? But, we've gotten to know Shakespeare with Shakespeare... and we've come to know Shakespeare as we've progressed.
+I've never seen Shakespeare play in English! Forget Shakespeare, I'll tell you about my favorite scene from Romeo and Juliet. I'll also share some of the most wonderful interactions Shakespeare had with Shakespeare and Shakespeareano. I'll also cover a lot of Shakespeare's own stuff! I'll also talk a little bit about how Shakespeare's fiction and poetry impacted him on an immense deal, from Gillian on the Wings of the Dove to Shakespeare on Romeo and Juliet. Shakespeare's Sonnets and Temptress Moon... and I'll also tell you about the role-playing game we played on Scrabble!
+I'll make an Englishman's point.
+Forrest Gump.
+Edward Scissorhands.
+Jeanne and the Perfect Guy.
+Edward Scissorhands.
+Edward Scissorhands.
+Brief Encounter in Paris.
+The Saint
+A Far Off Place.
+Hope Floats.
+Return to Me
+Mrs. Brown
+Telling You
+Trial and Error
+Chasing Amy
+My Son the Fanatic
+A Far Off Place.
+The Mummy
+The Last of the Mohicans
+Six Days Seven Nights
+Witness
+A Modern Affair
+The Saint and the Devil
+The Phantom of the Opera
+Shall We Dance?
+Brief Encounter in Love
+Lolita
+The Mummy: A Cinderella Story
+The Wedding Singer…and a Thousand Sons
+Trial and Error
+Love Jones
+Picture Got Boxed
+Walking Again
+Penny Serenade
+The Saint
+A Smile Like Yours
+The Saint-Exiles
+The Wedding Singer…and a Different Kind of Girl
+A Far Off Place
+The Lovers of the Arctic Circle
+L.A. Story
+The Lovers of the Arctic Circle
+The Last of the Mohicans
+The Saint
+A Far Off Place
+The Lovers of the Arctic Circle
+Great Expectations!
+The Saint
+Lolita
+Lolita Dove
+Penny Serenade
+Farewell
+The Allnighter
+Picture Got Boxed
+Walking and Talking
+Picture Perfect
+Lolita
+Fever Pitch
+The Allnighter
+Farewell to God
+Shine
+Lolita Divorce
+The Saint
+Picture Perfect
+Walking on the Moon
+A Smile Less Ordinary
+The Theory of Flight
+The Wings of the Dove
+The Little City
+St. Elmo's Fire
+Picture Perfect
+Mr. Jealousy
+Tin Cup
+The Nutty Professor
+Excalibur
+Commandments
+Lulu on the Bridge
+The Man in the Iron Mask
+Picture Perfect
+Addicted to Love
+Marty
+A Damsel in Distress
+The Big Blue
+Love Jones
+Love in the Afternoon
+Picture Perfect
+Ever After: A Cinderella Story
+Lulu on the Bridge
+Picture Perfect
+Fall of the Berlin Wall
+In Love and War
+Picture Perfect
+Picture Perfect
+Titanic
+Rendezvous in Paris
+Titanic: The Romanoffends
+Rendezvous in Love
+Picture Perfect
+Commandments
+The Last of the Mohicans
+Picture Perfect
+Love, Lies, and Scars
+The Butcher's Wife
+Picture Perfect
+Liebelei
+Picture Perfect
+Picture Perfect
+Dangerous Liaisons
+Michael
+Love and Other Catastrophes
+Picture Perfect, on the Bridge
+Love in the Afternoon
+The Little Mermaid
+Penny Serenade
+Manhattan
+The Adventure of Two Girls in Love
+The Leading Man
+The Theory of Flight
+The Chambermaid on the Titanic
+Walking on the Moon
+Excalibur, L'
+Splash
+The Object of My Affection
+Out of Africa
+Cinema Paradiso
+Madagascar Skin
+Return to Me
+The Chambermaid on the Titanic
+Wings of Desire
+Commandments
+I Love You, Don't Touch Me!
+The Chambermaid on the Titanic
+Excalibur
+Commandments
+The Young and Strange
+Out of Africa
+Ride with the Devil
+L.A. Story
+Annie Hall
+Penny Serenade
+Commandments
+Commandments, Crazy For Love
+Commandments Back to Africa
+Commandments, I'll Be Home For Christmas
+Commandments, Saint John
+Commandments, Saint Vincent and the Grenadines
+Fall
+Picture Perfect
+Picture Perfect
+Liebelei
+Picture Pic Crazy
+Liebelei
+Colonel Elmo's Grave
+I Love You, Don't Touch Me!
+Commandments, Saint
+
+[35 | 2507.46] loss=0.87 avg=1.67
+[40 | 2765.09] loss=0.49 avg=1.52
+Saving checkpoint/run romance_movies.txt/model-40

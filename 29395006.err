@@ -1,0 +1,6 @@
+ERROR: Could not find a version that satisfies the requirement gpt_2_simple (from versions: none)
+ERROR: No matching distribution found for gpt_2_simple
+Traceback (most recent call last):
+  File "/n/home04/antara/kure-llm-humor/experiments1.py", line 1, in <module>
+    import gpt_2_simple as gpt2
+ModuleNotFoundError: No module named 'gpt_2_simple'
