@@ -1,0 +1,282 @@
+Requirement already satisfied: pip in /n/home04/antara/myenv/lib/python3.10/site-packages (22.3.1)
+Requirement already satisfied: gpt_2_simple in /n/home04/antara/myenv/lib/python3.10/site-packages (0.8.1)
+Requirement already satisfied: tensorflow>=2.5.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (2.16.1)
+Requirement already satisfied: regex in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (2024.4.16)
+Requirement already satisfied: requests in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (2.31.0)
+Requirement already satisfied: tqdm in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (4.66.2)
+Requirement already satisfied: numpy in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (1.26.4)
+Requirement already satisfied: toposort in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (1.10)
+Requirement already satisfied: termcolor>=1.1.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (2.4.0)
+Requirement already satisfied: opt-einsum>=2.3.2 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (3.3.0)
+Requirement already satisfied: tensorboard<2.17,>=2.16 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (2.16.2)
+Requirement already satisfied: six>=1.12.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (1.16.0)
+Requirement already satisfied: tensorflow-io-gcs-filesystem>=0.23.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (0.36.0)
+Requirement already satisfied: astunparse>=1.6.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (1.6.3)
+Requirement already satisfied: gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (0.5.4)
+Requirement already satisfied: ml-dtypes~=0.3.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (0.3.2)
+Requirement already satisfied: typing-extensions>=3.6.6 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (4.11.0)
+Requirement already satisfied: libclang>=13.0.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (18.1.1)
+Requirement already satisfied: grpcio<2.0,>=1.24.3 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (1.62.2)
+Requirement already satisfied: h5py>=3.10.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (3.11.0)
+Requirement already satisfied: setuptools in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (65.5.0)
+Requirement already satisfied: wrapt>=1.11.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (1.16.0)
+Requirement already satisfied: packaging in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (24.0)
+Requirement already satisfied: flatbuffers>=23.5.26 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (24.3.25)
+Requirement already satisfied: google-pasta>=0.1.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (0.2.0)
+Requirement already satisfied: protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<5.0.0dev,>=3.20.3 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (4.25.3)
+Requirement already satisfied: absl-py>=1.0.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (2.1.0)
+Requirement already satisfied: keras>=3.0.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (3.3.2)
+Requirement already satisfied: certifi>=2017.4.17 in /n/home04/antara/myenv/lib/python3.10/site-packages (from requests->gpt_2_simple) (2024.2.2)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from requests->gpt_2_simple) (2.2.1)
+Requirement already satisfied: idna<4,>=2.5 in /n/home04/antara/myenv/lib/python3.10/site-packages (from requests->gpt_2_simple) (3.7)
+Requirement already satisfied: charset-normalizer<4,>=2 in /n/home04/antara/myenv/lib/python3.10/site-packages (from requests->gpt_2_simple) (3.3.2)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from astunparse>=1.6.0->tensorflow>=2.5.1->gpt_2_simple) (0.43.0)
+Requirement already satisfied: namex in /n/home04/antara/myenv/lib/python3.10/site-packages (from keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (0.0.8)
+Requirement already satisfied: optree in /n/home04/antara/myenv/lib/python3.10/site-packages (from keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (0.11.0)
+Requirement already satisfied: rich in /n/home04/antara/myenv/lib/python3.10/site-packages (from keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (13.7.1)
+Requirement already satisfied: markdown>=2.6.8 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorboard<2.17,>=2.16->tensorflow>=2.5.1->gpt_2_simple) (3.6)
+Requirement already satisfied: werkzeug>=1.0.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorboard<2.17,>=2.16->tensorflow>=2.5.1->gpt_2_simple) (3.0.2)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorboard<2.17,>=2.16->tensorflow>=2.5.1->gpt_2_simple) (0.7.2)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from werkzeug>=1.0.1->tensorboard<2.17,>=2.16->tensorflow>=2.5.1->gpt_2_simple) (2.1.5)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from rich->keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from rich->keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (2.17.2)
+Requirement already satisfied: mdurl~=0.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from markdown-it-py>=2.2.0->rich->keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (0.1.2)
+childrens_movies.txt
+Loading checkpoint models/124M/model.ckpt
+Loading dataset...
+dataset has 1420 tokens
+Training...
+======== SAMPLE 1 ========
+rouch. The first of them is that they are about to go to the war, but the second gets off his bike and comes to the other side. And finally the third one has the same goal: He is going to use his bicycle, but the bike has some limitations.
+
+So it's not a clear-cut decision, but the decision has to be made, and in a way, it's about time.
+
+GALLUP NEWS
+
+The most difficult part is figuring out where I belong.
+
+For one thing, it can be difficult to tell where I am. It's a physical and emotional and mental problem. Sometimes there's a feeling in there, and sometimes there's a feeling, and sometimes there's a feeling, and sometimes there's some feeling. I know that, but it feels like so many of us have it. But I also know that a little bit about who you are, and what you're going to do, and where you are going, and what you're going to take to the field and try to win.
+
+I know that, too, but I also know that one night I would like to lose at home. I would like to be a good person.
+
+But I know that I'd like to be good. I'm a good person that you can help.
+
+On the road: You could be an accomplished cyclist, but you're not at the best of grades.
+
+You could be one of the top 10, and I'm guessing that you're the top 10.
+
+On your team: You have a very big group and you have a lot of other guys.
+
+It doesn't even matter if they were the biggest and the best or the best. I think everybody's going to win their first game.
+
+On going blind: I'm not afraid of blind spots, but I think it's the best way to find an avenue to come in and play.
+
+That's why most of our friends are blind.
+
+On your own experience: A lot of the time I have a very good friend, and we have three other people.
+
+My buddy is the one who was a rookie, and when I'm walking to, I have to go look up to him for help. You look at the other people and you can just see them.
+
+I'm pretty good at it. I'm very good at it.
+
+On your time: A lot of people would say I'm the best kid growing up. But the first time I went on the road at four, I felt a sense of emptiness. It wasn't a good feeling at all. The first time, I thought it was some crazy thing. I thought I was going to kill myself.
+
+On winning: I've won about nine games, and I want to lose like a lot of other kids.
+
+When I win, I want to win on the other side of the lane. I want to win right along the way. On the road with the people, I think I have great people. I'm a smart guy, but I don't have great feelings about anyone.
+
+GALLUP NEWS
+
+The only time that you've won a game for the first time in your long-term career has been the second time. The first time was in the 2002 World Cup finals. Was that the real first time you won back-to-back games?
+
+GALLUP NEWS
+
+The first game was in my first year in junior college. We were in a different situation. I still remember in junior college, our teammates were not playing basketball and the team was only playing hardball. We had a really bad team, and that was our opportunity. If I put a little chip on my shoulder, I'd feel the pain every time I stepped off the floor.
+
+But I made big strides with that first big game.
+
+GALLUP NEWS
+
+The second game was in junior college to begin the first season. When you played that first game, what was your experience like?
+
+GALLUP NEWS
+
+I think I just learned the hard way on this ice, and that's what I've always been doing.
+
+We were playing against the good kids, and it was a big, good, big contest. The first time it was all a little different. It was a pretty good, big game.
+
+After that, I had the first two games, and I think we really played hard. I think they had more luck than I did because of how good the kids were. And we just got more experience.
+
+This game on the road with the coaches?
+
+GALLUP News
+
+The first game, if you're going to win it, is a lot more important than the second game. There's going to be a lot more heartache on both sides of the room, and we want each other to get out of that. You could see
+
+======== SAMPLE 1 ========
+restrial to the Moon, and the Secret Invasion of the Space Pirates, a tale of the first time a pirate tried to take over the world! The world is falling apart and you must save the world from another invasion of the Earth! The story can be retell in a way you had not envisioned!
+
+
+- Take your own journey: A new set of characters are introduced and some are added as new ones!
+
+- New characters have been added to the game: Kingpin, Black Panther, Ghost, Rocket Raccoon, and more!
+
+- New missions: A story is added to Kingpin and some new characters are added!
+
+- More of Kingpin's classic heroes in the new adventures, including the original character from Super Mario Advance!
+
+
+The most powerful Secret Invasion of the Earth-sized version of The Secret Invasion!
+
+
+Key Features
+
+- New Character
+
+- New Secret Invasion of the Earth-sized version of
+
+Kingpin and Ghost, each with their own unique gameplay.
+
+
+Kingpin
+
+
+Kingpin (Super Mario Run) features all the characters from the new Super Mario Run, including a new level, a new Secret Invasion of the Earth game mode, and more!
+
+
+Kingpin's Power Rangers
+
+Kingpin, King Paz (Sonic's Super Mario Story), and much else in this classic classic story!
+
+
+The Secret Invasion of the Earth
+
+
+Secret Invasion of the Earth brings to life what will forever be known as the Secret Invasion of the Earth. One of the greatest adventure stories ever! The Secret Invasion of the Earth was told by Steve Jackson in 1971 when he played with the original Super Mario Bros. NES character. Now, in the 1980s, Jack is fighting the Evil King and he's faced with two different dangers!
+
+
+The Secret Invasion of the Earth takes the classic Mega Man heroes to a new dimension and reveals what will replace them. Can you save Earth from a new enemy with a better, stronger version?
+
+
+Kingpin
+
+
+The Secret Invasion of the Earth is one of the top 3 adventures in the series. The adventures take you outside of the Mushroom Kingdom, where you face a new villain and the power to reshape the world to suit your whims. From Bowser to Mario to Snake to King Mickey, Kingpin is at the heart of the story and he'll try to force you to save his kingdom from your rivals!
+
+
+Paz
+
+
+Paz: A Super Power Ranger Goes to Earth!
+
+
+Paz: A Super Power Ranger!
+
+
+The Big Bad Boss Dies!
+
+
+The Big Bad Boss Dies!
+
+
+An Old Friend in Search of the Big Bad Boss: The Secret Invasion of the Earth Adventure
+
+An Old Friend in Search of The Big Bad Boss: The Secret Invasion of the Earth is an in-app purchase that lets you play as a friend of the Big Bad Boss. Your buddy, Peanut, travels back to his previous home in the South to save his family. When Peanut, along with the big bad, get trapped in his own dimension (called the Big Bad City), he's forced to face the evil of the Big Bad Boss until you defeat it! What kind of villain do you think could be hiding from you in the jungle, and how will you solve this mystery?
+
+
+The Big Bad Boss Dies
+
+In an unexpected event, a hero with a bad secret who had fallen for an old villain and a strong, evil, mysterious boss who'll get out of your way!
+
+
+The Secret Invasion of the Earth
+
+This amazing Super Mario 64 adventure follows the adventures of Kingpin and the Mighty No. 9, the new hero of NES games from 1992!
+
+
+The Secret Invasion of the Earth Game
+
+In this classic story, the Mighty No. 9 gets into a fight with the Evil King! All the heroes of the old Mighty No. 9 adventure are defeated and must face the evil of the Fantastic Four!
+
+
+The Secret Invasion of The Earth Game Game
+
+
+The Mighty No. 9's adventures in this classic adventure take the Mighty No. 9's team of heroes to an exciting new dimension. When a villain with no good intentions emerges, the Mighty No. 9 is forced to battle the villainous new guy for glory.
+
+
+Super Mario: The Adventures of Super Mario Team Fortress
+
+Super Mario Team Fortress is a great NES adventure and it never fails to have its time on its side! Join Mario and his team at the helm of a super secret company as they take on the ever-growing team of Mario and Luigi, complete with unique costumes, new heroes, a whole new way to play, and the ability to ride the "Super Mario Bros." on a giant robot!
+
+
+The Battle of Super Mario Bros.
+
+Super Mario Bros. Battle! will have you fighting the superpowered Mario Go! and the superpowered Luigi! There's no better way to show your support for your beloved franchise than
+
+[5 | 507.27] loss=2.23 avg=2.23
+======== SAMPLE 1 ========
+ull of the Dark Crystal, The Legend of Zelda, The Link to the Past and Legend of Zelda: The Wind Waker will all be added to this special edition of this bundle.
+
+The Legend of Zelda: Majora's Mask, Donkey Kong Country 2, Kid Icarus: Uprising and Super Mario Bros.
+
+The Legend of Zelda: Majora's Mask will also be available on Nintendo Switch. This new adventure comes bundled with one of the many bonus games from Nintendo's Nintendo Direct, Zelda: Majora's Mask: Dark Amnesties and Breath of the Wild. The adventure will be released in English and in North America on Nintendo 4DS as of March 30, 2018.
+
+D2: A Link in Time
+
+D2: A Link in Time introduces four new playable characters to one of Nintendo's most dynamic franchises, including Zelda and Link in Time. This exclusive bundle contains all four new heroes, including Zelda — and their parents, Zelda and Link — in the history-making adventure.
+
+D2: A Link in Time:
+
+D2: A Link in Time comes bundled with the following titles: Zelda: The Adventure of Link and Princess Zelda: Princess of Thieves. This bundle, together with A Link in Time:
+
+D2: King Krule in Outer Space includes a digital download of King Krule: The Adventure of King Krule and the Legend of Zelda: The Wind Waker. The title will be available digitally with one copy of the game, along with a bonus CD pack.
+
+D2: King Krule in Outer Space:
+
+D2: King Krule and Princess Zelda: Princess of Thieves are available as downloadable content for PlayStation 4 and Xbox One. The game's launch is March 23.
+
+Game of Thrones
+
+Game of Thrones is set to release in 2017, making it the first game to be completely digitally re-released to the public. This new game includes all seven seasons of Game of Thrones. Season 3 of The Winds of Winter is also out and available in both HD and 4K formats.
+
+Game of Thrones
+
+Game of Thrones may also be coming to consoles later this year. The first of these two games, Game of Thrones: High Road, is on PS4, PS3 and PS Vita and is the new PlayStation 4 exclusive game for PC users, along with its free downloadable content, all coming to Xbox One in May 2016. The game also includes the first five episodes of The Winds of Winter, the fourth of which features a cameo from the hit show.
+
+Beside Game of Thrones: High Road, players will learn that the kingdom of Westeros is going to embark on its greatest and best voyage ever. If that journey is to last, and Game of Thrones is destined to stay that way, it will be a great moment to be on the receiving end of a tidal wave of new adventures.
+
+Watership Down - The Next Big Thing
+
+Watership Down arrives to a small South American town in May 2016. The world has been transformed and the inhabitants of the town are in for a rude awakening. When a war erupts, they must save the town and its princess, Marguerite, and prepare themselves for the fall. In order to do that, will a newly elected king, Tywin Lannister, rescue the princess and save the world?
+
+Watership Down
+
+Watership Down is the first installment in the long-running series. The story follows an epic voyage to Agrabah, the home of King Alderaan. The adventure starts off great, but the kingdom of Eorzea is in dire need of a new ruler, which leads the characters to a mysterious, secret kingdom that has already fallen to the last!
+
+The Legend of Zelda: Princess of Thieves: Wind Waker
+
+Mario Kart 64
+
+Homeward Bound: The Journey Begins
+
+Homeward Bound was one of the greatest racing franchises ever created. The team behind Homeward Bound, Doki Doki Tatsuya and Donkey Kong Country 2, were pioneers in the classic game, but it isn't long before they left to create a brand new game, The Legend of Zelda: The Wind Waker. These two games will be released in the Americas and Europe in 2017 and 2018, respectively.
+
+Homeward Bound: The Journey Begins
+
+WarioWare
+
+The Legend of Zelda: The Wind Waker is a must-have RPG for all fans of classic Nintendo RPGs. The title, which has been in development since the time of its first game. The Legend of Zelda: The Wind Waker is a must-have for any Zelda fan. In many ways, it makes an unmissable sequel to Zelda: The Wind Waker.
+
+Mario Kart 64;
+
+Mario Kart 64: Dream Team
+
+Mario Kart: Super Circuit:
+
+Mario Kart Wii
+
+Diddy Kong Country HD
+
+Diddy
+

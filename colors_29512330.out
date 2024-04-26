@@ -1,0 +1,3363 @@
+Requirement already satisfied: pip in /n/home04/antara/myenv/lib/python3.10/site-packages (22.3.1)
+Requirement already satisfied: gpt_2_simple in /n/home04/antara/myenv/lib/python3.10/site-packages (0.8.1)
+Requirement already satisfied: tensorflow>=2.5.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (2.16.1)
+Requirement already satisfied: regex in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (2024.4.16)
+Requirement already satisfied: requests in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (2.31.0)
+Requirement already satisfied: tqdm in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (4.66.2)
+Requirement already satisfied: numpy in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (1.26.4)
+Requirement already satisfied: toposort in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (1.10)
+Requirement already satisfied: typing-extensions>=3.6.6 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (4.11.0)
+Requirement already satisfied: keras>=3.0.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (3.3.2)
+Requirement already satisfied: grpcio<2.0,>=1.24.3 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (1.62.2)
+Requirement already satisfied: tensorboard<2.17,>=2.16 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (2.16.2)
+Requirement already satisfied: protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<5.0.0dev,>=3.20.3 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (4.25.3)
+Requirement already satisfied: tensorflow-io-gcs-filesystem>=0.23.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (0.36.0)
+Requirement already satisfied: packaging in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (24.0)
+Requirement already satisfied: six>=1.12.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (1.16.0)
+Requirement already satisfied: ml-dtypes~=0.3.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (0.3.2)
+Requirement already satisfied: flatbuffers>=23.5.26 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (24.3.25)
+Requirement already satisfied: setuptools in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (65.5.0)
+Requirement already satisfied: astunparse>=1.6.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (1.6.3)
+Requirement already satisfied: absl-py>=1.0.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (2.1.0)
+Requirement already satisfied: wrapt>=1.11.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (1.16.0)
+Requirement already satisfied: h5py>=3.10.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (3.11.0)
+Requirement already satisfied: termcolor>=1.1.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (2.4.0)
+Requirement already satisfied: opt-einsum>=2.3.2 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (3.3.0)
+Requirement already satisfied: gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (0.5.4)
+Requirement already satisfied: google-pasta>=0.1.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (0.2.0)
+Requirement already satisfied: libclang>=13.0.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (18.1.1)
+Requirement already satisfied: charset-normalizer<4,>=2 in /n/home04/antara/myenv/lib/python3.10/site-packages (from requests->gpt_2_simple) (3.3.2)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from requests->gpt_2_simple) (2.2.1)
+Requirement already satisfied: certifi>=2017.4.17 in /n/home04/antara/myenv/lib/python3.10/site-packages (from requests->gpt_2_simple) (2024.2.2)
+Requirement already satisfied: idna<4,>=2.5 in /n/home04/antara/myenv/lib/python3.10/site-packages (from requests->gpt_2_simple) (3.7)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from astunparse>=1.6.0->tensorflow>=2.5.1->gpt_2_simple) (0.43.0)
+Requirement already satisfied: optree in /n/home04/antara/myenv/lib/python3.10/site-packages (from keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (0.11.0)
+Requirement already satisfied: rich in /n/home04/antara/myenv/lib/python3.10/site-packages (from keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (13.7.1)
+Requirement already satisfied: namex in /n/home04/antara/myenv/lib/python3.10/site-packages (from keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (0.0.8)
+Requirement already satisfied: markdown>=2.6.8 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorboard<2.17,>=2.16->tensorflow>=2.5.1->gpt_2_simple) (3.6)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorboard<2.17,>=2.16->tensorflow>=2.5.1->gpt_2_simple) (0.7.2)
+Requirement already satisfied: werkzeug>=1.0.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorboard<2.17,>=2.16->tensorflow>=2.5.1->gpt_2_simple) (3.0.2)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from werkzeug>=1.0.1->tensorboard<2.17,>=2.16->tensorflow>=2.5.1->gpt_2_simple) (2.1.5)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from rich->keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from rich->keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (2.17.2)
+Requirement already satisfied: mdurl~=0.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from markdown-it-py>=2.2.0->rich->keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (0.1.2)
+colorsbest.txt
+Loading checkpoint models/124M/model.ckpt
+Loading dataset...
+dataset has 18913 tokens
+Training...
+======== SAMPLE 1 ========
+
+
+This is a really good way to kickass the time of day between the parties.
+
+If you have any requests for the same recipe or ingredients from other people, feel free to mail me at thefollow@gals.ch. To let me know if there are any variations, I will add them into my post.<|endoftext|>I'm sure many of you have heard of the "Halloween" costume. I am here to get that special thing you never imagined it would do for us.
+
+It looks like sooooooo big but to those of you who have not seen it all I would like to present a video (from the same time that you are watching a Halloween costume: the Halloween 2017 Video.)
+
+I am so pretty sure I can see that this movie is the first of many.
+
+
+And just for those who want to see a picture of the game on their phone in the dark I would like to include here that video, the "Grim Night" version.
+
+Enjoy!<|endoftext|>(JTA) —
+
+In the last five years, the United Nations Refugee Agency has documented nearly 80,000 people from around the world have been displaced by conflict in the Middle East. This data is not a snapshot, but a snapshot of how many refugees have been placed inside the country.
+
+"The United Nations High Commission on Refugees" collects refugee data in a series of interactive videos and online reports of refugees who have crossed the Mediterranean, including two videos and an audio interview in which they describe their experiences.
+
+In one of the videos, one refugee who described his experience as "unparalleled" describes his entire day of being pushed from school, his school bus pulled up outside of school, his mother's car pulled back to take him to school, school. He described how he had to take his mother to school in the morning, and a stranger would come to him with questions regarding the school lunch.
+
+In another video, the refugee describes how he has come across a wall of children who are forced to live under it because the school's principal refused to remove them.
+
+The official reports come from the U.N. High Commission on Refugees, which reports the number of refugees who have come to the country in the last five years at the current rate of 2,000 per year.
+
+"The UNHCR has reported a record 1.14 million refugees in the last five years," said Christine Kost, senior vice president at UNHCR in Brussels.
+
+Most refugee populations are predominantly from Syria, Iraq, Afghanistan, and Yemen.
+
+It is estimated that as many as 30,000 Syrians and those on the U.N. Red Cross Red Crescent in Central/Eastern Europe are displaced or in need of humanitarian assistance, most of whom would require rescue from their own country.
+
+To get an accurate picture of how many refugees have been placed in the country, the U.N. has collected information on how many refugees have been placed in a group of at least three groups — in addition to Syrian refugees and other groups of residents.
+
+According to the UNHCR, approximately 14,000 refugees are currently in the group, according to the latest figures by the UNHCR. The numbers of Syrians and those on the Red Crescent in Central/Eastern Europe are estimated at about 100,000. The Red Cross estimates that 4,700 refugees are in need of humanitarian assistance, most of whom are people in need of assistance because of the ongoing conflict in Syria.
+
+The number of refugees in the group includes "dwellers, children, women and elderly people of all ages." The refugees themselves are divided into five groups:
+
+1. Women
+
+In order to provide shelter for this group, UNHCR has collected information on gender, age, and ethnicity. In some cases, refugees are referred to the UNHCR by their families to be resettled because they are not in good health, the UNHCR has confirmed.
+
+2. Children
+
+The UNHCR reports that 1,400 Syrian and Palestinian women have been admitted to the Red Cross refugee camp in the Middle East. The number of refugee children was also confirmed.
+
+3. Women
+
+As of September 2015, the UNHCR reported that 1,615 refugees had been resettled in the Middle East region. The numbers are for all people in the group.
+
+The U.N. Refugee Agency has reported about 18,000 refugees, including 2,000 Syrians from the Central and Eastern European countries who have been resettled.
+
+The government of Syria has said the number of refugee children is very high, but the numbers of refugees of that nationality are at a low of about 30,000 annually.
+
+In fact, the number of Syrian refugees is estimated at around 10,000.
+
+4. Men
+
+The UNHCR reports that there are more than 14,000 refugees from all over the world being resettled in the United States. This group includes Syrian refugees and those in need of humanitarian assistance from the
+
+======== SAMPLE 1 ========
+ush and a deep brown color. The same thing applies to a wide variety of fish.
+
+As it happens, these may just be the perfect color for a good evening's rest or for making your night so much brighter.
+
+I also use the Black Widow as a light and white filter, a common color in many outdoor and outdoor fishing gear:
+
+What Is It?
+
+Black Widow is an orange-like liquid that's sometimes called a berry. As it's the best color for a light fish filter, it's a good choice for both night time and high humidity fish. It's also a great color if you're looking for an alternative to the traditional black & white:
+
+When It's Fresh
+
+Black Widow is the first known species of fish to be eaten by humans. It can't be eaten by all fish (at least not by the fish in the back row of a supermarket), so it's eaten only by very big ones. The fact that it is an herbaceous fish is perhaps the greatest thing we can do with Black Widow. Black Widow's ability to digest water, and absorb all the light from the air, is not only a miracle, it's also one of the world's best choices for a nightlife.
+
+While there's no one perfect color for Black Widow, the black & white filter works like a charm in that it keeps it from getting stuck on the screen as quickly as possible:
+
+As mentioned, it might have to be a little bit of a stretch to say it's a fish-free filter (you can't get a better filter for Black Widow).
+
+Black Widow doesn't like to be eaten by watery fish, nor does it like to be eaten by the skin. However, with some effort, a Black Widow can be eaten any time of year or any place. A great test of this is if it can be eaten by your friends or family.
+
+The color of Black Widow makes it a great way to brighten your room. It's also a great solution for any nighttime fish.
+
+How Does It Work?
+
+It works by turning water into a gas.
+
+The process is similar to one used to prepare fish for cooking. A gas is a mixture of carbon dioxide and water dissolved in water, which is then poured into the bottle to form a gas. It gives the liquid energy to cool. After cooling, it's distilled to water.
+
+Black Widow comes in a range with an oil content of 60-80% carbon dioxide.
+
+Black Widow can't absorb light rays, and it can't absorb light, so this method of preparation is perfect for those night light fish.
+
+When It's Red
+
+It's the perfect color for night fish.
+
+Black Widow is considered a common fish in many coastal regions as it is usually eaten by fish in the lower portions of the rivers and streams.
+
+When it's Red (or Black)
+
+Black Widow is used to create a red tint on a fish that is not able to absorb light. As the color changes and the water in Black Widow becomes hotter (red), the color of this fish will change a lot, causing the water in Black Widow to become much less red.
+
+The color of Black Widow varies depending on the season of the fish, as in the warmer regions of Florida (winter) or New York (summer).
+
+When It's Warm
+
+It's the great color for night fish so it's great for fish swimming in your yard or at your hotel.
+
+It will give your fish a light green or purple when it's warmer or when it's red.
+
+It's important for the fish to stay warm; it will prevent it from getting stuck in the water if its temperature drops.
+
+Black Widow comes in a variety of colors, and a wide range of color variations on the day, but it's the one you are interested in. For a deeper look at all the colors, you can find the page at the bottom of the page.
+
+Black Widow Is the Red
+
+Blue
+
+Purple
+
+Black
+
+Orange
+
+Pink
+
+Green (red)
+
+Gray
+
+Black
+
+Purple
+
+Black
+
+Orange
+
+Purple
+
+Black
+
+Orange
+
+Black
+
+Blue
+
+Purple
+
+Green
+
+Purple
+
+Purple
+
+Black
+
+Orange
+
+Purple
+
+Red (red)
+
+Red (orange)
+
+Purple
+
+Blush (black), or Purple (black)
+
+Paprika
+
+Makes 4 to 5 Tablespoons
+
+Ingredients
+
+Red (from the "Hands of Nature")
+
+Black (from the "Hands of Nature")
+
+Purple (from "Hands of Nature") Water in Black (from the "Hands of Nature" or "Hands of Nature" color) (if desired
+
+[5 | 481.00] loss=2.52 avg=2.52
+======== SAMPLE 1 ========
+
+
+But these three are not the only members who might enjoy a bit of time with the company.
+
+As the CEO of the company of which he claims responsibility, Hildebrand will be a part of the team for many months on end.
+
+"A new day, a new idea for me…" Hildebrand told me in a conversation in the company's office over lunch in September.<|endoftext|>The second part of the two-part episode "The Red-Hot-Ridge" was about a young boy in London named John. His parents are both very interested in him and want to take him to see his father's family. A visit from his grandfather convinces John to go into his father's care first so that his father may not have to find out to him that their young friend is missing. This was a little more than a week ago.
+
+A young boy is in the care and comfort of his father's care.
+
+After the child is removed from his mother's care he makes contact with his mother. The mother's name is Mary. He then makes contact with his mother to tell her all he knows about the mysterious girl, named Mary.
+
+It seems that when Mary returns home for the summer, John tells him that their family is there to protect him and all he really has is a family member.
+
+This is not surprising given the fact that the baby is a boy and his mother is a girl.
+
+But what exactly has caused these two stories to come together? One of the things that bothers a lot of parents is that they don't know the truth about the mystery until someone else has come forward, because they're unsure as to what is going on. Even after getting some information on this mystery by someone else, some parents get quite concerned about what's next.
+
+When John and Mary are in the care of a baby girl, things get to be very confusing. He seems to be in a relationship in the hospital and it is unclear what the baby's family thinks about this boy who has just left home and needs to be rescued and saved. When John and Mary are in the care of a baby girl, things get a little more difficult.
+
+The situation at hand turns out to be very troubling.
+
+After seeing Mary and John on a plane and having to wait for the person to pick her up and bring her home for the winter, the baby girl is not in the comfort of her own home. The boy and sister of the baby are still missing and John leaves his parents to go see his father. He does have to make a choice between being safe or being in danger, and it could be pretty scary to see that situation. The boy is still in danger, in fact, even though he doesn't know what is going on.
+
+Even though Mary and John are safe, and while it's possible that the baby could be in trouble with a baby boy, the child still wants to go and do something with the baby boy.
+
+But, John refuses. He says his mother does not want him to go to the hospital in the first place. Instead, he starts being sad for his mother, as her family are worried that the boy might be missing. John and Mary decide to stop in a corner to get the message out.
+
+This is quite a shocking story, and not without its consequences. On the one hand, it's a simple fact that it does not get much attention. On the other hand, it raises a question. Does this really have to be a story of a boy and a girl in the same situation?
+
+We'd like to believe that this is not a simple one, but a story where a family would choose not to live in fear over the death of their child. So, when I think of the story, I know this story has serious implications for young people, and they must be at the forefront of it. I am in the process of writing a new book about the story that I wrote in the very first book, "The Red-Hot-Ridge."
+
+The story that inspired what is happening in London to me is based on the story of a young boy who is in the care of his mother (and father), and in the hope that her death will bring about a change in their relationship.
+
+I want to tell the story of a young boy who doesn't know when his mother might be back (she's been gone for a hundred years?), but to do that he needs to make a choice (and if he chooses to do so, he's not alone).
+
+I wanted to give my readers a little bit of an insight into the whole story and I would like to share some of what you think. I hope this story resonates.
+
+In all, I hope that you all agree with me as to what I think about this story.
+
+I hope that you want to write more stories about this story that will not only shock your children, but also to bring
+
+======== SAMPLE 1 ========
+ Pink the White" The Dark Knight
+
+The Dark Knight
+
+Darkest Dungeon
+
+Darker Nights
+
+Dark Skies
+
+Dandelion
+
+Dandelion
+
+Dark Horse
+
+Dark Nights: The Magic of Love
+
+Death Eaters
+
+Deathly Hallows
+
+Dark Fuzz
+
+Dark Knight
+
+Dead Horse
+
+Deadly Night
+
+Darkest Dungeon
+
+Darkness of Darkness
+
+Darkest Hour
+
+Darkest Nightmare
+
+Darkest Nightmare
+
+Darkest Nightmare
+
+Darkest Night
+
+Darkest Night
+
+Darkest Night
+
+Dreamscape
+
+Dreamland
+
+Dreamland
+
+Dreamland
+
+Dreamwave
+
+Dreamworks
+
+Dreamwalker
+
+Dreamy Night
+
+Dreamy Night
+
+Dreamy Night
+
+Darkest Night
+
+Darkest Night
+
+Darkest Night
+
+Dark Forest
+
+Darkest Night
+
+Darkest Night
+
+Darkest Night
+
+Darkest Night
+
+Darkest Night
+
+Dazzle
+
+Dazzled Pink
+
+Dolphin
+
+Deep Blue
+
+Deep Blue
+
+Deep Silver
+
+Deepsea
+
+Delicate Pink
+
+Delight
+
+Delicate Pink
+
+Desert Green
+
+Desert Green
+
+Desert Gold
+
+Desire
+
+Desert Green
+
+Desert Purple
+
+Despair
+
+Desperate Green
+
+Desperado
+
+Despharrot
+
+Despicable Dragon
+
+Despicable Blue
+
+Desperado
+
+Despecan
+
+Desque
+
+Despond
+
+Despair
+
+Despair
+
+Despair
+
+Detail
+
+Detail
+
+Detective
+
+Detective Pink
+
+Detective Purple
+
+Detective Purple
+
+Detuned
+
+Devilflesh
+
+Devices
+
+Devil's Breath
+
+Devices
+
+Devilish
+
+Devon
+
+Devotee
+
+Devotion
+
+Devoto
+
+Devotion
+
+Devoted
+
+Devotee
+
+Devotee Gold
+
+Dazzling Flamingos
+
+Dazzling Flower
+
+Dazzling Pink
+
+Dazzling Purple
+
+Dazzling Sand
+
+Dazzling Snow
+
+Dazzling Stripes
+
+Dazzling White
+
+Dazzling Wood
+
+Dart
+
+Dazzling Purple
+
+Dagger
+
+Durango
+
+Durado
+
+Durango
+
+Durango Gold
+
+Durango Silver
+
+Durango Teacup
+
+Durango White
+
+Durango Yellow
+
+Durango White
+
+Dessert
+
+Dessert
+
+Dark Moon
+
+Dark Fuchsia
+
+Darkest Night
+
+Darkest Night
+
+Darkest Night
+
+Darkness
+
+Deeper
+
+Darkest Night
+
+Darkest Nightsky
+
+Darkened
+
+Darkest Night
+
+Darkest Night
+
+Darkest Night
+
+Darkest Night
+
+Darkest Night
+
+Darkest Nightmare
+
+Darkest Nightmare
+
+Darkest Nightmare
+
+Darkest Nightmare
+
+Darkstar
+
+Distant Blue
+
+Distant Dark
+
+Darker
+
+Distant Green
+
+Distant Green Green
+
+Distant Pink
+
+Distant Purple
+
+Distant White
+
+Distant Pink
+
+Distant Violet
+
+Distant Violet
+
+Distant Violet
+
+Distant Summer
+
+Distant Sun
+
+Distant Summer
+
+Distant Yellow
+
+Distant Wild
+
+Distant Wing
+
+Dove
+
+Dwarf
+
+Dwarf
+
+Duffy
+
+Duffy
+
+Duffy
+
+Duffy Pink
+
+Duffy Purple
+
+Duffy Rose
+
+Duffy White
+
+Duffy White
+
+Dux
+
+Duxan
+
+Duet
+
+Duper
+
+Duxette
+
+Duxo
+
+Duxo Orange
+
+Duxu
+
+Dolphin
+
+Deep Purple
+
+Deep Water
+
+Deep Water Blue
+
+Dovecot
+
+Dovecot
+
+Endangered Cherry
+
+Endless Blue
+
+Endless Blue
+
+Endless Red
+
+Endless White
+
+Endless Red
+
+Endless Sea
+
+Endless Teal
+
+Endless Teal
+
+Endless Thunderball
+
+Endou
+
+Enchanted Peach
+
+Epic Chocolate
+
+Epic Cinnamon
+
+Epic Elegance
+
+Epic Egg
+
+Epicanery
+
+Epic Fuchsia
+
+Epic Fuchsia Pink
+
+Epic Pink
+
+Episcopalian Black
+
+Episcopalian Blue
+
+Episcopal
+
+Episcopalian Gray
+
+Epidemon
+
+Epidemic
+
+Epizox
+
+Episcopalian
+
+Ep
+
+[10 | 953.58] loss=2.37 avg=2.45
+======== SAMPLE 1 ========
+oy
+
+Rice
+
+Rice
+
+Rices
+
+Rice Cream
+
+Rice Fluff
+
+Rolled Red Velvet
+
+Roll On
+
+Rolling Rain
+
+Rope
+
+Rope Candy
+
+Rope Gold
+
+Rope Flamingo
+
+Rope Spray
+
+Raspberry
+
+Raspberry Biscuit
+
+Raspberry Butter
+
+Raspberry Cream
+
+Raspberry Fizz
+
+Raspberry Ice
+
+Raspberry Fluff
+
+Raspberry Ice Cream
+
+Raspberry Cream
+
+Raspberry Dessert
+
+Raspberry Flower
+
+Raven
+
+Raven Red
+
+Ravenous
+
+Ravenous Cake
+
+Ravenous Cream
+
+Ravenous Blue
+
+Ravenous Brown
+
+Ravenous Pink
+
+Ravenous Purple
+
+Ruby
+
+Ruby Leaf
+
+Ruby Glitter
+
+Ruby Glitter
+
+Ruby Light
+
+Ruby Lick
+
+Ruby Lightning
+
+Ruby Pills
+
+Ruby Pills
+
+Ruby Pills
+
+Ruby Pills
+
+Ruby Sand
+
+Ruby Sand Blush
+
+Ruby Sands
+
+Ruby Sundial
+
+Ruby-Lip Flush
+
+Ruby Veil
+
+Ruby Turf
+
+Rubber Spoon
+
+Rubious Sand
+
+Rubulous Sand
+
+Rubus
+
+Rubus
+
+Rubus
+
+Rubious
+
+Rubus Pink
+
+Rubus Silver
+
+Rubus Silver
+
+Rubus Red
+
+Rubus Silver
+
+Rubus Smooch
+
+Rubus White
+
+Rubin
+
+Rubino
+
+Racial
+
+Raco Raccoon
+
+Raccoon
+
+Raccoon Cake
+
+Raccoon Cake Gold
+
+Raco Green
+
+Raccoon Green
+
+Raccoon
+
+Raccoon Red
+
+Ravens
+
+Ravens
+
+Ravenous
+
+Rabid
+
+Rabid
+
+Rabe's
+
+Rabid
+
+Rabid Brown
+
+Rajana
+
+Roman Holiday
+
+Roman Holiday Blue
+
+Roman Holiday Pink
+
+Raffetti
+
+Raffetti
+
+Raffia
+
+Ragu Blanca
+
+Raffia
+
+Raffini
+
+Rajibai
+
+Rajibai Chocolate
+
+Rajus
+
+Rajus
+
+Rajus Milk
+
+Rajuya
+
+Rajuk
+
+Rajuya
+
+Raffaella
+
+Raffeal
+
+Raffee
+
+Raffelade
+
+Raffellini
+
+Raffaele
+
+Raffigi
+
+Raffini
+
+Raffigi
+
+Ralpho
+
+Raguacola
+
+Rajek
+
+Rajika
+
+Royal Blue
+
+Silhouette
+
+Silk
+
+Silka
+
+Silky Sea
+
+Silky Snow
+
+Silk Crust
+
+Silk Cloud
+
+Silky Snow
+
+Silvered Blue
+
+Silvered Green
+
+Silvered Pesto
+
+Silvery Blue
+
+Silvery Gray
+
+Silvy
+
+Silvy White
+
+Silky White
+
+Silza
+
+Silva
+
+Silver Blue
+
+Silversunoke
+
+Silversunawn
+
+Silvery
+
+Silvy
+
+Silvy
+
+Silvy Green
+
+Silvy Purple
+
+Silvy Red
+
+Silvy Silver
+
+Silvia
+
+Silvia
+
+Silvio
+
+Silva
+
+Silvia Green
+
+Silvia Gold
+
+Silvia Pearl
+
+Silva
+
+Scissor
+
+Scout
+
+Scratchy Black
+
+Scratchy Brown
+
+Scratchy Cream
+
+Scissor
+
+Scratchy Green
+
+Scratchy Pink
+
+Scrivener
+
+Scissor
+
+Screech
+
+Scrion
+
+Screech
+
+Scrumptious Blue
+
+Screeching
+
+Scrub
+
+Scrozz
+
+Scrozzelle
+
+Scrappy
+
+Scarlet
+
+Scarlet Heart
+
+Scarlet Hearts
+
+Scratch
+
+Skullaby Gold
+
+Skunk
+
+Skiff
+
+Skier
+
+Skull of the Sea
+
+Skyscraper Blue
+
+Skyscraper Pink
+
+Skull of the Seas 2
+
+Skunk
+
+Seen on the Beach
+
+Seaborn
+
+Seagull
+
+Seafood
+
+Seafar
+
+Seasons
+
+Seashell
+
+Seismic
+
+Seismic Green
+
+Seabiscuit
+
+Seabiscuit Green
+
+Seismical Purple
+
+Seek
+
+Seismic Gold
+
+Seismic Red
+
+Seismic Silver
+
+Seaslide
+
+
+======== SAMPLE 1 ========
+ine. There are also 2 new styles on offer: "Lush and Red" and "Pesto".
+
+This was the year of the petri dish.
+
+Advertisements<|endoftext|>We've seen this on many occasions before, but the last time we saw it was in 2009, when it turned out that a child was accidentally shot in the face by an adult.
+
+It's not in a way a crime, and it's not even in connection with sex, it's a common occurrence and one of the most serious criminal charges in the United States.
+
+So that's the situation with a shot in the arm of a child to the head.
+
+An 11-year-old baby was shot in the head, and his parents are the ones who took action to preserve their own baby.
+
+But while the kid wasn't in the ring to protect his own life and his mom's, what happened to him in the past is a little less tragic to our generation. It's probably time for a bit more calm and a little bit more courage when it comes to protecting our daughter!
+
+So let's take a quick look at how to protect your loved one.
+
+We've got a lot of great tips to help, but if you do take a risk and can't resist taking your shot, don't let your guard down. You have the right to defend yourself and you will have a chance to win the respect of all the people of Ohio.
+
+Let Us in
+
+We wanted to help protect a child. We were very pleased with our options for this occasion. We decided to offer this a try.
+
+This is a pretty cool idea, just a few of the beautiful pieces of art you see in the background. There's also a lovely piece that was made for this party in Cincinnati.
+
+But what sets this off from a lot of fun is that it uses colored paper by the name of "Pesto". So it's a little too green to be safe for lunch.
+
+So, to see a glimpse of the Pesto, a small white dot was placed into your hand in the shape of a cat. It looks scary and a bit unsettling if you're not careful.
+
+But the idea of a Pesto is just to remind you of the fact that all of these animals are beautiful birds.
+
+And that's what we are.
+
+So here is to keeping in mind this is only a short look at a short story that has been in print for more than a decade.
+
+Let us know which one is your favorite in the comments.
+
+More from Waco
+
+Warp Away
+
+Frozen
+
+Frothy Purple
+
+Fruit Green
+
+Fuchsia
+
+Fuchsia Mint
+
+Futurary
+
+Fuzzy Green
+
+Feuillettes
+
+Flame
+
+Fleur de Lys
+
+Galvanic
+
+Green
+
+Gold
+
+Green Milk
+
+Guacamole
+
+Good Morning
+
+Golden Cream
+
+Golden Peach
+
+Garnet
+
+Granola
+
+Glazed Green
+
+Golden Leaf
+
+Golden Tortilla
+
+Golden Turquoise
+
+Golden Wheat
+
+Golani
+
+God
+
+Holy Grail
+
+Holy Grail
+
+Hot Pepper
+
+Hot Water
+
+Holy Fire
+
+Holy Grail
+
+Holy Fireworks
+
+Holy Grail
+
+Holy Storm
+
+I'll Be in Black
+
+I Don't Always Love My Children
+
+In the end
+
+In My Heart
+
+In the End
+
+Inside That
+
+On Ice
+
+Out of Time
+
+Ocean Breeze
+
+Ocean Breeze
+
+Oceanic Breeze
+
+Oceanic Gold
+
+Oceanic Purple
+
+Oceanic Red
+
+Oceansilk
+
+Orange
+
+Orange Glow
+
+Orange Twist
+
+Oceanic
+
+Oriental Pink
+
+Oceanic
+
+Palm Tree
+
+Palm Waves
+
+Palm Pink
+
+Palm Green
+
+Papaya
+
+Palm Breeze
+
+Paprika
+
+Paprika
+
+Papyrus
+
+Pink
+
+Pinky
+
+Pinky
+
+Pink Velvet
+
+Pinky
+
+Poison Ivy
+
+Poison Ivy
+
+Pinky Orange
+
+Poof
+
+Peach White
+
+Peach Grey
+
+Peach
+
+Pea
+
+Peach Cane
+
+Peach Forest
+
+Pine
+
+Peach Forest
+
+Pine
+
+Pine Rose
+
+Peachy Rose
+
+Prison
+
+Prune Green
+
+Purple
+
+Purple Flush
+
+Raspberry
+
+Rose
+
+Rose Gold
+
+Raspberry Brown
+
+Rose Gold
+
+Raspberry Mint
+
+Rose and Brown
+
+Raspberry Mint
+
+Raspberry Peach
+
+Raspberry Pine
+
+Rom
+
+======== SAMPLE 1 ========
+bat
+A lot has been said about the history of Pokémon and why it's there. I thought as soon as an announcement was made that there will be a Pokémon themed Pokémon game.
+A video of me playing Pokémon on the roof of your mouth.
+A picture of my Pokémon with the caption "Smile!"
+A photo of my Pikachu on the roof!
+A video of my Pikachu with the caption "I Love Pokémon!"
+A picture of your Pokémon on the roof!
+A picture of your Pokémon on the roof!
+A picture of your Pokémon on the Moon!
+A video of Pokémon on a Cloud!
+A video of your Pokémon on the Gold!
+A video of your Pokémon on the Moon!
+A blue box to the nose
+A blue glow for me
+A blue glow for the world!
+A blue light
+A blue light on a night
+A blue glow for all ages
+Blue Sky
+Blue Sky
+Blue Mist
+Blue-Eyed
+Bluey Blush
+Bluey Blush
+Bluey Blush
+Bluey Blush
+Bluey Blush
+Bluey Blush
+Bronze
+Bronze
+Bronze Cloud
+Bronze Heart
+Bronzed Heart
+Bronze Heart
+Bronzes
+Away of the Sun
+Away of the Moon
+Away of the Sun
+Away of the Sun
+Away to Go
+Away to the Moon
+Apostol
+Apostol Green
+Apostol White
+Apostrophe
+Apostrophe
+Apostrosa
+Aquatic Gold
+Aquatic Pink
+Aquatic Purple
+Aquatic Red
+Aquatic Yellow
+Aquatic White
+Ascendent Pink
+Astrid Pink
+Astrid Wood
+Astro Blue
+Astro Boogie
+Astro Blood
+Astro Blood Gold
+Astro Butter
+Astro Dark
+Astro Dolly
+Astro Grey
+Astro Lime
+Astro Pink
+Astro Orange
+Astro Pink
+Astro Purple
+Astro Sashimi
+Astro Yellow
+Astro Unicorn
+Astroway
+Aquarium
+Aquarium Pink
+Aquarium Red
+Aquat
+Aquatic Pink
+Avant-Garde
+Avant-Cait
+Avant-Royal
+Avant-Royal Royal
+Avant-Royal Silver
+Avant-Royal Teal
+Avant-Royal Teal
+Avant-Royal Yellow
+Avant-Royal
+Avant-Rosa
+Arrow Bark
+Arrow
+Aquatic
+Aqua
+Arrogant
+Arrogant Belly
+Arrogant Brown
+Arrow
+Barn
+Barnacle Green
+Avocado
+Avocado Gold
+Avocado Purple
+Avocado Red
+Avocado Silver
+Avocado Smirk
+Avocado White
+Aravanian Blue
+Aviary
+Aviar
+Aviator Pink
+Aviary Orange
+Azure
+Azura
+Azur
+Azul
+Azur
+Azute
+Azure Blue
+Azurca
+Azure Dark
+Azure Flamingo
+Azure Sea
+Aux
+Auxiliary Bath
+Auxiliary Blue
+Auxiliary Green
+Auxiliary Purple
+Auxiliary Purple
+Auxiliary Red
+Auxiliary White
+Avocado
+Avocados
+Avocado
+Avocado-Bacchanal
+Avocado-Dress Red
+Avocados in a Teal
+Avocado Fizz
+Avocado Fizz
+Avocado Lettuce
+Avocado Lilac
+Avocados and Raspberry
+Avocado Mist
+Avocados Pasta
+Avocado Pesto
+Avocados Pasta
+Avocados Pasta
+Avrotic
+Avroider
+Avrodera
+Avrodera
+Avros
+Avron
+Avenous
+Avena
+Avena Orange
+Avena Pink
+Avene
+Avery Pink
+Avery Pink
+Avery Yellow
+Avery Yellow
+Avery Violet
+Auxiliary Pink
+Auxiliary
+Auxiliary Violet
+Auxiliary Purple
+Auxiliary
+Auxiliary White
+Auburn
+Auburn Mint
+Auburn Peach
+Auburn Red
+Auburn Silver
+Auburn Winter
+Auburn White
+Auburn Yellow
+Auburn Yellow
+Apollo Blue
+Attractant Red
+Attraction
+Ancient Black
+Ancient Blue
+Ancient Blue
+Ancient Gold
+Ancient Green
+Ancient Metal
+Aquatic
+Aquarian
+Aquarius
+Aquatic Blue
+Aquatic Magenta
+Aquarium Yellow
+Aquarium Space
+Aquatic Purple
+Aquarion
+Aquarius
+Aquarius Red
+Aquarius Silver
+Aquarion Woods
+Aquarius
+Aquatic Pink
+Aquaman
+Avalanche
+Avalanche Gold
+
+
+[15 | 1530.43] loss=2.09 avg=2.33
+======== SAMPLE 1 ========
+ North and South Florida.
+
+This slideshow requires JavaScript.
+
+In the late 1800s, a man was arrested for stealing a young woman's purse in downtown New York City. He later disappeared and investigators say he may have followed the same trail for as long as it took him to find him.
+
+More about the St. Louis Stinger<|endoftext|>Toad
+Toad
+Toad
+Thick
+Thickest
+Taffy
+Taffy
+Taffy Gold
+Taffy Pink
+Taffy Purple
+Taffy White
+Taffy Taffy
+Taffy Yellow
+Taffy White
+Terra
+Terrain
+Terminus
+Tyrannus
+Terracotta
+Tertiary
+Tetris
+Timber
+Tenerife
+Temptations of Heaven
+Temptalia
+Treasury
+Treasury of Light
+Treasury of Darkness
+Teal
+Teal of Life
+Teal of the Sun
+Teal of the Grey
+Teal of the Night
+Triumph of the Gods
+Triumph of the Sea
+Teal of Treasure
+Trivia
+Teal of Woe
+Teal of Time
+Thundercloud
+Thunderball
+Thunderbolt
+Thunderbird
+Thunderbird Revenge
+Thunderstorm
+Thunderstruck
+Thunderstruck Kisses
+Thunderstruck Summer
+Thunderstorm
+Thunderstruck Winter
+Toadberry
+Toadies Pink
+Treasure Island
+Treasures of Orange
+Treasury of Light
+Treasure Island
+Teal of the Void
+Teal of the Wild
+Teal of War
+Teal of the Vampire
+Teal of the Void
+Teal of the Night
+Teal of the Whale
+Teal of the Night
+The Big Green
+The Blood of a Green
+The Blood Moon
+The Bleached Cider
+The Bleached Egg
+The Bleached Flank
+The Blue
+The Blue Marble
+The Blue Moon
+The Blue-Haired Lady
+The Blue Pill
+The Blue-Tipped Tuna
+The Blue Tuna of Love
+The Blue Sky
+Bluegrass
+Chili
+Chocolate
+Chocolate Mousse
+Chocolate Mousse Lettuce
+Chocolate Mousse with Butter
+Chocolate Macchiato Lime Pie
+Chocolate Mint
+Chocolate Mustache
+Chocolate Melon
+Chocolate Pastry
+Chocolate Nectar
+Chocolate Serenade
+Chocolate Sauce
+Chocolate Swirl
+Chocolate Storm
+Chocolate Taffy
+Chorizo
+Chrono
+Chorizo
+Chromatic
+Chrome
+Chrome-Coloured Gold
+Chrome
+Chronos
+Chrono Flux
+Chromatic
+Chrome-Grey
+Chrome-Rose
+Chrome-Tender
+Cry of the Vultures
+Cry of the Vampires
+Chrome
+Chrome
+Chrome Landscape
+Chrome-White
+Chrome Wave
+Chrome White
+Chromewood
+Chromewood
+Chrysanthemum
+Coconut
+Crème Fraîche de Lavender
+Crème de Lavender Mint
+Crème-Fondue
+Cry of the Vampires
+Cry of the Vampires
+Cry for Blood
+Cry of the Wild
+Cry of the Vampire
+Cry for Blood
+Crystal Palace
+Crystal Palace
+Crystal Palace Passion
+Crystal White
+Crystal White
+Crystal White Dreams
+Cloudy Night
+Cloudy Morning
+Cloudy Night
+Cloudy Night in Your Dream
+Cloudy City
+Cloudy Night of Night
+Cloudy Nights
+Cloudy Nights in Paradise
+Cloudy Nights in Paradise
+Dark
+Darkest Night
+Darkest Night on Earth
+Darkest Seas
+Darkest Seas in the Wild
+Darker Nights
+Darker Seas of Paradise
+Dark Green
+Darkest Glow
+Darkest Shade of Dawn
+Darkest Space
+Darkest Night
+Darkest Sea
+Darkest Space Between
+Darkest Treasure
+Darkest Yellow
+Darkest Yellow
+Darkest World of Dreams
+Darkest Yellow
+Darkest Waffle
+Darkest Zest
+Darkest World of Illusion
+Darkly
+Darkly Dark
+Darkly Dark
+Darkening
+Darkening in the Grass
+Darkened Night
+Darkened Forest
+Darkening
+Darkening Light
+Darkening Mountain
+Darkening Orange
+Darkening Purple
+Darkening Pink
+Darkness in Space
+Darkness Mist
+Darkness Past
+Darkness Past Midnight
+Darkness Past the Dawn
+Darkness Past the Moon
+Darkening Pink
+Darkness Past the Rain
+Darkening Red
+Darkening Summer
+Darkest Yellow
+Darkest Vibrant
+Darkest Yellow
+Darkest Wood
+Darkest White
+Darkest White
+Darkest Zippo
+Darkest Yellow
+Darkest Witch
+Darkest Warrior
+Darkest Warrior
+Darkest Warrior
+Darkest Yellow
+Darkest Zebra
+Darkest Wood
+Darkest Wolf
+
+======== SAMPLE 1 ========
+WT]Sneaking into a Room" and "[Sneaky Green Lantern]Swan Lake" (with a few hints and a twist).
+Spiral (Sparring Gold):
+Spirits
+Spirits & Waves
+Sphinx Kiss
+Sphinx:
+Sphinx Queen
+Spider-Man Night
+Squeaky Puff
+Squeaky Sponge
+Swimming in the Dark
+Swimming With Love
+Swimming In the Dark
+Swimsuit Night
+Swimming in the Dark
+Sneaky Velvet
+Sneaky Womb
+Sterling Red
+Sterling Glow
+Sterling Salt
+Sterwinkle
+Sterling Scent
+Sterling Taffy
+Sterling Turquoise
+Sterling Vibrant
+Swimming In the Dark
+Stop by any of our favorite local stores for a special discount.
+Stop in to purchase some snacks in a different location.
+Stop in to buy a Tuna in a different location. If that is not easy you can always purchase something else entirely.
+Stop to buy some fresh watermelon in a different location.
+Stop to buy a Tumblstoy in a different location.
+Stop to buy some fresh leaves in a different location.
+Stop to buy some fresh grass in a different location.
+Stop to purchase some fresh flowers in a different location.
+Stop to drink a lot of water in a different location.
+Stop in to buy some fresh berries in a different location.
+Stop to eat a lot of rice in a different location.
+Stop to eat a lot more lettuce in a different location.
+Sneaky Pink
+Sneaky Red
+Sneaky Brown
+Sneaky Rose
+Sneakin'
+Sneaky Rose
+Sneaky Rose Liger
+Sneaky Violet
+Sneaky White
+Sneaky Violet
+Sneaky White Chocolate
+Sneakin'
+Sneaky White
+Snakewood
+Snakewood
+Snakewood Kisses
+Snakewan Red
+Slippery Red
+Slowing
+Slowing Down
+Slippery Waffle
+Slim Blue
+Slim Pink
+Slim Yellow
+Slightly Blue
+Slightly Pink
+Slicing Wine
+Sleepless Nights at Baths
+Sleepless Nights at the Opera
+Sleepless Nights at the Opera Wine
+Sleepless Nights at the Opera Noir
+Sellebrite
+Sleeping Beauty
+Sleepless Nights at Snow
+Sleigh Night
+Silver Gold
+Silver Bullet
+Silver Bullet
+Silver Blaze
+Silver Feather
+Silver Flamingo
+Silver Fern
+Silver Lips
+Silver Mint
+Silver Metal
+Silver Meteor
+Silvermoon
+Silverstone
+Silverware
+Silk
+Silhouette
+Silk Boots
+Silken Muffler
+Silky Mauve
+Silken Silk
+Silky Wool
+Silkscreen
+Silkscreen White
+Silk Wreaths
+Stony Green
+Swan
+Swan of Dreams
+Swansea
+Swansea Beach
+Swansea Dawn
+Swansea City
+Swansea Flickering
+Swansea Flower
+Swansea Flower & Garden
+Swansea Kiss
+Swansea Mint
+Swansea Moon
+Swansea Noir
+Swansea Oasis
+Swanting
+Seashell Red
+Seafood
+Sealed
+Sealed Sea
+Sealed Lake
+Seafood King
+Seaflorn
+Seafar
+Sneaking Pile
+Sneaky Yellow
+Silk
+Silk Leaf
+Silkworm
+Silken Flamingo
+Silken Steel
+Silkscreen
+Silken Storm
+Silken Stone
+Silken Wisteria
+Silkworm Venom
+Silky
+Sloan River
+Swimming
+Sleep
+Sleepy Hollow
+Silver Beach
+Silver Goddess
+Silver Gold
+Silver Flamingo
+Silver Glitter
+Silver Glitter
+Silver Lagoon
+Silver Lagoon Dreams
+Silver Lips
+Silver Lizard
+Silvermoon
+Silver Pizzazz
+Silverrabbit
+Silvery Gold
+Silvery Pudding
+Silvery Scent
+Sterling Red
+Sterling Waves
+Snow White
+Snowboard
+Sunderland
+Snowflake
+Sterling White
+Snowflake Mousse
+Spellbound
+Spellbound Citadel
+Spellbound Mousse
+Snowball
+Snowflake
+Snowy Sands
+Snowy Sands
+Snowy Mountains
+Sky Blue
+Sky Diver
+Skyward
+Skate
+Skyway
+Skyway of a Lifetime
+Sultan Grey
+Space Knight
+Space Exploration
+Space Hulk
+Space Marine
+Space Opera
+Storm
+Storm of Passion
+Stormy Night
+Stormy Night Blue
+Stormy Night Pink
+Stormy Day
+Stormy Night Turquoise
+Stormy Night Violet
+Stormy Night White
+Stormy Night Yellow
+Stormy Night
+Stormy Night
+Storm
+
+[20 | 2003.32] loss=2.10 avg=2.27
+Saving checkpoint/run colorsbest.txt/model-20
+======== SAMPLE 1 ========
+ to "I Love You Kiss Me" in the middle of the night, but then the light will go out.
+Luxurious
+Luxurious Flux
+Luxury Tawny
+Limousine
+Luxurious Mint
+Liquor
+Liquor Queen
+Lamprey
+Liquor Queen Lips
+Lizard
+Lizard Dust
+Lizard Dust Lips
+Lizard Dust Lips
+Lizard Kingdom Lips
+Lizardly Glow
+Lotus
+Lotus Rainforest
+Lotus White
+Loot
+Lucky
+Lucky Pink
+Lucky Purple
+Lucky Red
+Lucky White
+Lucky Violet
+Lucky
+Lucky Yellow
+Luffy
+Luffy Pink
+Lucky Yellow
+Luffy Tangerine
+Lucky Yellow
+Lucky-Eyes Orange
+Lum
+Lumber
+Lunar Glide
+Lunar Kiss
+Lunar Magic
+Lunar Storm
+Lunar Waves
+Lunar Travel
+Luxurious Lips
+Luxurious Silk
+Luxuras
+Luxury
+Luxury Lips
+Luxury Lips
+Luxury Lips
+Luxury Lips
+Luxurious Lotion
+Lunar Blast
+Luxurious Pink
+Light
+Light Blue
+Light Green
+Light Blue
+Light Grey
+Light Grey
+Light Metal
+Light My Love
+Light Purple
+Light Rock
+Lightning Orange
+Lightning Red
+Lightning Swig
+Lightning Treasure
+Lightning World
+Lightning Yellow
+Lightning Wave
+Lightning Wave Red
+Lightning Wing
+Lightning Yellow
+Lightning Yellow
+Lightning Yellow
+Lightning Tawny
+Lightning Yellow
+Lightning Wave Black
+Lightning Yellow
+Lightning Wave Green
+Lucky Grape
+Lucky Grey
+Lucky Green
+Lucky Lemon
+Lucky Mint
+Lucky Miracle
+Lucky Mist
+Lucky Pina Colada
+Lucky Pirate
+Lucky Peach
+Lucky Quill
+Lotus
+Lotus Wood
+Lotus Woodland
+Lotus Worm
+Lucky Pink
+Lupus
+Lush Purple
+Lush Sash
+Lush Woods
+Lush Woods Lullaby
+Lush Woodlot
+Lush Woods Ledge
+Lush White
+Lucky Raspberry Luster
+Lustering Lava
+Lustrate Lips
+Lustrous Lips
+Lustrous Lips
+Lusty Lime
+Lusty Malamute
+Lusty Lime Flamingo
+Lotus Pie
+Lotus
+Lunar Gold
+Lunar Mists
+Lunar Magic
+Lunatic
+Lunatic Ledge
+Lusty Peach
+Luscious Peach
+Luminous Peach
+Luminous Red
+Lume
+Luminous Mist
+Luminescent
+Lounge Mellow
+Luxury Lotion
+Lucky Purple
+Luxury Silk
+Luscious Lavender
+Luxury Silk Silk
+Lute Lute Lute
+Luminous Night
+Lurid Lime
+Luxurcated Orange
+Luxurious Magenta
+Luxury Silk
+Luxurious Plum
+Luxury Plum
+Luxurious Rhubarb
+Light Up Your Lips
+Light My Love
+Lightly Pink
+Lightning
+Lightning Wave
+Lightning Wave
+Lightning Wave Lettuce
+Lightning Wave Pomegranate
+Lightning Wave Scarlet
+Lightning Wave Threesome
+Lightning Wave Yellow
+Luxurious Purple
+Luxury
+Luxurious White
+Luxury Luscious
+Lunar
+Lunar Paradise
+Lunar Pizzeria
+Lunar Paradise
+Lunar Waters
+Lunar World
+Lunar Waters
+Lunar Water
+Lunar Vortex
+Lunar Waterfalls
+Lush
+Lush Garden
+Lush Lush Landscape
+Lush Lips
+Lush Landscape Lime
+Lush Lips Red
+Lush Lips Yellow
+Lucky Piñata
+Lucky Pink
+Lucky Silver
+Luminous Lum
+Luminous Yellow
+Luxury
+Machinery
+Moonlit Night
+Meadow
+Meadow
+Meadow Clough
+Meadow Cloth
+Meadow Kingdom
+Meadow Lace
+Meadow Melodies
+Meadopi
+Meadowing Mist
+Meadow Tropic
+Meadow Velvet
+Memory Locks
+Meadowworld
+Meadow Woodside
+Meal of the Gods
+Meadowworld
+Meadowworld Blue
+Meadowworld Green
+Meadox White
+Meadowworld White
+Meadowworld Yellow
+Meadowworld Zebra
+Midge
+Monoculture
+Monkey Moon
+Monkey Scent
+Monsoon
+Monsoon
+
+======== SAMPLE 1 ========
+
+
+Ace Attorney
+Ace Gold
+Ace Pen
+Ace’s Blush
+Ace’s Gold
+Ace’s Red
+Ace’s Blue
+Ace’s Coffee
+Ace Verdi Blue
+Ace Verde
+Ace Verde Gold
+Ace Verde’s Blue
+Ace’s Cloud
+Ace Verte
+Aceville
+Acevole
+Acer Tea
+Acer Tea Red
+Acevulcan
+Aquamarine
+Aquatic Pink
+Avocado
+Avocado Dough
+Avenid
+Avenged Seven Star
+Avenice
+Avocado Toast
+Aquino
+Avocado’s Sweet
+Aquatic
+Apten
+Aptly Peach
+Aqua Pink
+Asphalt
+Asphalt Base
+Asphalt Ivory
+Asphalt Silk
+Asphalt
+Aptuous Pink
+Asphalt Pearl
+Aptissimo
+Aquatic
+Aqua
+Aquatic Cloud
+Aquatic Cloudy Waves
+Aquatic Cloudy Sea
+Aquacadé
+Aquatic Coral
+Aqua Pink
+Aqua Storm
+Aquatic Pink
+Aquatic Purple
+Averroes
+Averrois
+Averrois Denim
+Auer-Thierry
+Auerfunken
+Auerfunken Gold
+Auerplacett
+Averrois White
+Aussie
+Arundel
+Ayanami
+Ayanami Lime
+Ayanami Red
+Ayanami Yellow
+Ayanami White
+Ayanami’s Heart
+Ayanami’s Glow
+Ayanami’s Glow’ Full
+Ayanami Zest
+Ayanami
+Ayanoan
+Aquamarine
+Aquamarine Red
+Aquaman
+Aquaman’s Kiss
+Aquamarine Vine
+Aristola
+Aristlewood
+Aristolian Yellow
+Arisina
+Aristolian Violet
+Aramaic Pink
+Aror
+Arami
+Aringo
+Aristopoulus
+Aristopoulous
+Ariel
+Aro
+Arocha
+Arosa
+Aroma
+Aroma of Rage
+Aroma of Illusion
+Aroma Kisses
+Arose
+Arochion
+Albatross
+Alcatraz
+Alcatraz Gold
+Alcatraz Mint
+Alcassero
+Alcatraz Mint
+Albatross’s Gold
+Amphibian Carrot
+Amphibian Chocolate
+Amphibious Purple
+Amphibious Red
+Amethyst
+Amphibious Red
+Amphisca
+Amulet
+Amulet Purple
+Amulet’s Kiss
+Amuletwood
+Amuletworm
+Amuletwood’dwarf
+Amuletwood’s Flamingo
+Amuletous Pink
+Amorous Orange
+Amuletous Tea
+Amuletous Sizzling
+Amy
+Auld Lang Syne
+Auld Lang Syne Red
+Auburn
+Auburn Kiss
+Auburn Kisser
+Auburn Kissing
+Auburn Sun
+Auburn’s Glow
+Auburn’s White
+Aubergine Brown
+Auberge
+Auburn Breeze
+Auburn Skin
+Auburn Tangerine
+Auburn Woodsland
+Auburn Woodwind
+Auburn’s Fawn
+Auburn’s Little Green Menace
+Auburn Tea
+Auburn White
+Auburn’s Summer
+Auburn Wedding
+Auburn Wood
+Aubergine
+Aubergine Green
+Auburn Wreath
+Aubergine Ice
+Aubergine Lemon
+Aurelle
+Aurelle Glow
+Aurelle Lemonade
+Aurelle Rose
+Aurora
+Aural
+Aural Carpet
+Aurora’s Red
+Ausan Pink
+Aurora’s White
+Aurora’s White Chocolate
+Aurora’s Yellow
+Aurora’s White Chocolate’s Sugar
+Aurora’s Yellow
+Aurora’s Violet
+Aurora’s Violet Cream
+Aurora’s Violet Ice
+Aurora’s Violet Mint
+Aurora’s Vibram White
+Aurora’s Water
+Aurora’s Violet
+Aurora’s Whispers
+Aurora Wishing
+Aurora's Kiss
+Aurora’'s Water
+Aurora’s Water
+Aurora’s Waterspeeder
+Aurora
+
+======== SAMPLE 1 ========
+Last
+Rising Star
+Royal White
+Royal Olive
+Royal Red
+Rubellini
+Ruby
+Sacrifice
+Sugar
+Sugar Chill
+Sugar Baron
+Salt
+Sea View
+Sea Pink
+Sea Salt
+Slightly Pink
+Sand
+Slightly Tasty
+Sea-Vomice
+Sea View
+Sea World
+Sea Serpent
+Silent Night<|endoftext|>A Brief Tale of Civilization
+
+It has finally arrived!
+
+The Great Barrier Reef
+
+The Black Lagoon
+
+The Black Sea
+
+The Blackbird
+
+Black Sea
+
+Blackout
+
+Blizzard
+Blasted Jade
+
+Blazing Gold
+
+Bliss Kiss Kisses
+
+Blissful Blossoms
+
+Blues
+Bubble
+
+Blues of Summer
+
+Bubblehead
+
+Bubbled Glass
+
+Bubblehead
+
+Bubblefish
+
+Bubblefish
+
+Bubblewister
+
+Black
+
+Black Panther
+
+Blackberry
+
+Black Market
+
+Black Sheep
+
+Black Sheep
+
+Blackberry
+
+Blackout
+
+Blackout
+
+Blossoms
+
+Blossoms Gold
+
+Blurry
+
+Blush
+
+Blush Potion
+
+Blushover
+
+Blushstone
+
+Blushworm
+
+Blusco
+
+Blusco
+
+Blushstone
+
+Bourbon
+
+Bouillon
+
+Bread
+
+Breadcrumb
+
+Breadsteed
+
+Breadth of Summer
+
+Breadworm
+
+Brain
+
+Brain Damage
+
+Brief History
+
+Brainwashed
+
+Bruxelles Pink
+
+Bruxelles Red
+
+Biohazard
+
+Biohazard Blue
+
+Biohazard Green
+
+Bramblewood
+
+Biohazard Mint
+
+Banana
+
+Banana Biscuit
+
+Banana Cheesecake
+
+Banana Buttercup
+
+Banana Frappé
+
+Banana Ice
+
+Banana Cream
+
+Banana Frost
+
+Banana Green
+
+Banana Green Velvet
+
+Banana Light
+
+Banana Lemon
+
+Banana Magenta
+
+Banana Lemonade
+
+Banana Lilac
+
+Banana Mango
+
+Banana Pea
+
+Banani
+
+Bananan Blue
+
+Banana Pomp
+
+Banata
+
+Banana Rain
+
+Banana Rose
+
+Banana Vat
+
+Banana Waffle
+
+Bitter Lime
+
+Banana Wing
+
+Bitter Violets
+
+Bitter White
+
+Bitter White Wool
+
+Bitter White
+
+Brekker Black
+
+Breeding
+
+Bitter Green
+
+Bitter Purple
+
+Bitter Red
+
+Bitter Rose
+
+Bitter Space
+
+Bitter White
+
+Bitterwax
+
+Blaming Fire
+
+Blaming Wave
+
+Blaming Sun
+
+Blaming White
+
+Blaming Yellow
+
+Blaming Yellow
+
+Blammer
+
+Blaming Turf
+
+Blaming Turf
+
+Blight
+
+Bird
+
+Brine
+
+Brine White
+
+Brine Red
+
+Bristol
+
+Bristol Red
+
+Bristol Red Ale
+
+Bristolic
+
+Bristolous
+
+Bristolous Green
+
+Bristolous Red
+
+Blood Orange
+
+Blood Orange Ice
+
+Blood Orange Ice
+
+Blood Orange Mist
+
+Blood Orange Mist
+
+Blood Orange Wine
+
+Blood Orange Wine
+
+Blood Orange Vinegar
+
+Blood Orange Vines
+
+Bloodletting
+
+Bravo
+
+Bristol Black
+
+Bristolian
+
+Bristolian Blonde
+
+Bristolian Breeze
+
+Bramaneer Black
+
+Branite
+
+Bramblewood
+
+Branco
+
+Brambon
+
+Brambled Eggplant
+
+Bramblewood
+
+Bramblewood Flush
+
+Bramblewood Whispers
+
+Bramblewister
+
+Bramblewood
+
+Bramblewist
+
+Bramblin
+
+Bramblewood
+
+Brambley Boyfriend
+
+Berry
+
+Berry Coffee
+
+Brain
+
+Biohazard
+
+Biohazard
+
+BioShock
+
+BioShock Infinite
+
+Bros Red
+
+Brosstalk
+
+Brunette
+
+Brunette Gold
+
+Bouillon
+
+Boulevard
+
+Boulevard Express
+
+Bourbon
+
+Bourois Violet
+
+Bourbon Champagne
+
+Bourbon Gold
+
+Bourbon Gold
+
+Bourbon Green
+
+Bourrienne
+
+Bourbon Purple
+
+Bourbon Secret
+
+Bourbon
+
+[25 | 2587.72] loss=1.84 avg=2.18
+======== SAMPLE 1 ========
+
+1:45 AM
+Basketball Wagon
+Basketball
+Basketball
+Basketball
+Basketball
+Bolton
+Bolted
+Bun-Bun
+Blank Slate
+Blazing Glow
+Blarga Red
+Blanco Gold
+Blinking Lion
+Blam! Blushing
+Blorid
+Boulevard Blue
+Blasphemous
+Blazing Jade
+Blue Apron
+Blue Raspberry
+Blue Apron and Chocolate
+Blue Card
+Blue Cheese
+Blue Fairy
+Blue Haze
+Blue Sky
+Blue Scented
+Blue Tooth
+Blue Panther
+Boulevard Bordeaux
+Boux Blois
+Boublestère
+Breath of the Tiger
+Bitter Passion
+Bitter Red
+Bitter Violet
+Bitter Taste
+Bitter Whisperer
+Bitter Water
+Bitterwoo
+Bitterwoo Grey
+Bitterwuzz
+Bitterwuzzed
+Bitterwuzzy
+Bitterwuzzy
+Bitterweeds
+Biter
+Bite Me
+Bitterwister
+Bitterwuxom
+Bitterwuxom
+Breakin' Green
+Breakin Pink
+Breastfeeding
+Breastplate
+Breastplate Dressing
+Breastplate High
+Breeding
+Breeder
+Breeding
+Breeder’s Daughter
+Breveo
+Broom Coffee
+Broomcell
+Bun Cracker
+Bunched Blue
+Buncy
+Bunctuous Blue
+Bungalow
+Buns and Pizzas
+Bulma
+Bunberry
+Betty Lilacs
+Buncey White
+Buns and Jelly
+Buns and Cheese
+Bunsen
+Bunsen Red
+Bango
+Badass Blue
+Bunji
+Bubble Bomb
+Busty Blue
+Bunk
+Busty Docks
+Bunk of Black
+Bumblebee
+Bubbleberry
+Bunca
+Bubble Boy
+Bumble Bee
+Bunji
+Buckeye
+Bangkok
+Banana
+Banana Dough
+Banana Lettuce
+Banana Latte
+Bananas
+Banana Teal
+Banana Slumber
+Banana Sliver
+Banana Vinaigrette
+Banana Wash
+Banana Vortex
+Banana Wreath
+Banana Wood
+Banana Zippo
+Bunco
+Bulk
+Bunami
+Buncola
+Bundled
+Bulk
+Bum Shoehorn
+Bunziger Red
+Bunji Yellow
+Bunky Red
+Bulk
+Buntegra
+Bunter
+Bunterweig
+Bunyan
+Busair
+Busseous
+Bucaro
+Buurna
+Bulk
+Bulk White
+Bulletproof
+Blank Slate
+Blank Space
+Blazing Cloud
+Blizzard Bluff
+Blooming Glow
+Blooming Rose
+Blizzard
+Blooming Woods
+Blooming Orange
+Blooming Pink
+Bloom
+Blowing Star
+Blush Kisses
+Blushing Glow
+Blushing Sea’s Blue
+Blush Glow
+Blushing Stone
+Blushing Watermelon
+Blush of a Rose
+Blush’t
+Blush’t Brown
+Blush’t Brown
+Blush’t Cherry
+Blushing Sky
+Blushing Wave
+Blush Wave Pink
+Blush Up
+Blushing Wool
+Blushy Champagne
+Blushy Cloud
+Blushy Glow
+Blushing Turquoise
+Blinking Lips
+Bliss
+Blizzard
+Blue Apron
+Blue Chest
+Blue Cheese
+Blue Dune
+Blue Flame
+Blue Flamingo
+Blue Grass
+Blue Haze
+Blue Horizon
+Blue Inferno
+Blue Mist
+Blue Moon
+Blue Mirage
+Blue Nacho
+Blue Noir
+Blue Priestess
+Blue Rainbow
+Blue Ribbon
+Blue Rage
+Blue Ray
+Blue Screen
+Blue Screen’t
+Boulevard Bleu
+Boulevard Revenge
+Bouillon Champagne
+Bouquet Caster
+Bousteau de France
+Buchet de Chimichurri
+Buchet’s Chestnut
+Bubble Bomb
+Beau Grasse
+Beau Vieux
+Busty Beige
+Bay Area
+Babe
+Beau Verdi
+Beacon
+Beau Taro
+Bec Noir
+Bremerton
+Besper
+Befunk
+Beige
+Beet
+Beige Brick
+Beige Chestnut
+Benetern
+Beige Baron
+Bebop
+Bebble
+Beige Coffee
+Beister
+Bezel
+Bellflower
+Belden Rose
+Belden Yellow
+Beet Pistachio
+Beeline
+Bee-Egg
+Beorcina
+Beorcini Blue
+Big Bang
+Big Brother Blue
+Big Fish
+Big Red
+Big
+
+======== SAMPLE 1 ========
+
+
+Titan Blue
+
+Transfusion
+
+Tennis Ball
+
+Tonkatsu
+
+Thunderbolt
+
+Thunderous
+
+Tornado
+
+Trapped in the Wind
+
+Tornado Mist
+
+Tropical Storm
+
+Translucent
+
+Translucent Cloud
+
+Twinkling
+Twilight
+
+Tulip
+
+Trickster Pink
+
+Tunnel
+
+Turkey Green
+
+Tunnel Crashers
+
+Underground
+
+Underground Gardens
+
+Underground Gardens of Love
+
+Urban
+
+Urban Cowboy
+
+Urban Outpost
+
+Vaccining Red
+
+Vaporwave
+
+Vaporwave Kiss
+
+Vaporwave Kisses
+
+Vaporwave Vortex
+
+Water Bottle
+
+Water Dandy
+
+Waterfall
+
+Waterfall Lavender
+
+Waterfall Magenta
+
+Waterfall Orange
+
+Wireless
+
+Waterfall Teal
+
+Waterfall Teal
+
+Waterfall Violet
+
+Walk in the Park
+
+Walk by Night
+
+Weed
+
+Weezer
+
+Weisman
+
+Wezier Red
+
+Weir Gold
+
+Weir Gold Rush
+
+Weyland
+
+Weyster
+
+Weyster Kingdom
+
+Weyster Sea
+
+Weyster Sponge
+
+Weysin
+
+Weyster Wool
+
+Weyster Water
+
+Weyster Wave
+
+Weyster Yellow
+
+Weyster Wave Breeze
+
+Weyster Yellow
+
+Weiss
+
+Weiss Grapefruit
+
+Weissmied
+
+Weissmier
+
+Wisps
+
+Wisps of Night
+
+Wisps of Sun
+
+Wispsy
+
+Weaver
+
+Welder
+
+Weyster Widow
+
+Weysterweaver
+
+Weyster Wool
+
+Weysterway
+
+Weysterway
+
+Ivy
+
+In the Park
+
+Ivy Pond
+
+Ivy Rose
+
+Intimate Love
+
+Impressionism
+
+Island
+
+Isolation Blue
+
+Italiano
+
+Italiana
+
+Italiano Pink
+
+Intergalactic Space
+
+Insane Blue
+
+Interstellar
+
+Intergalactic Temple
+
+Impatient
+
+Imperial Red
+
+Imperial Yellow
+
+It's a Dream
+
+Jalapeño
+
+Jungle Jungle
+
+Jungle Mist
+
+Jungle Yellow
+
+Jungle Spirit
+
+Jumbo Blue
+
+Jumbo Red
+
+Katy Berry
+
+Katy Berry Garden
+
+Lady Bird
+
+Lady of the Lake
+
+Lady Nectar
+
+Lapis Yellow
+
+Lavender
+
+Lavender Cinder
+
+La Caramel
+
+Leaf Green
+
+Lavender Leaf
+
+Lavender Lemon
+
+Lavender Mint
+
+Lazy Jade
+
+Lazy Summer Breeze
+
+Light Blue
+
+Light Brown
+
+Light Blue
+
+Light Green
+
+Light Grey
+
+Light Pink
+
+Light Purple
+
+Light Salmon
+
+Light Salmon in a White Dress
+
+Light Purple
+
+Light Salmon on a Beach
+
+Lightness
+
+Lightning
+
+Lightning in the Wind
+
+Lightning and Ice
+
+Lightning in the Dark
+
+Milk
+
+Milk Bath
+
+Milk Corn
+
+Milk Chocolate
+
+Milk Flush
+
+Milk Fields
+
+Mammalian
+
+Mallard
+
+Midnight
+
+Midnight at Night
+
+Midnight in America
+
+Midnight Mist
+
+Midnight Mood
+
+Midnight Mist
+
+Midnight Wood
+
+Midnight White
+
+Midnight Yellow
+
+Midnight White Glaze
+
+Midnight Yellow
+
+Midtetti
+
+Mallard
+
+Mallard Cream
+
+Monochrome
+
+Monstrous Brown
+
+Monument Valley
+
+Menthol Sea
+
+Monument Valley Sunset
+
+Methadone
+
+Mist
+
+Monster Milk
+
+Monsters Ink
+
+Moss
+
+Moon
+
+Mossy
+
+Mossy Sands
+
+Mountain View
+
+Mountain Dew
+
+Mountain View
+
+Minerva
+
+Mini Lemon
+
+Molasses
+
+Moonshine
+
+Morbid Candy
+
+Morocco Gold
+
+Mona Leche
+
+Mona Vie Meuse
+
+Moccasin
+
+Nature Boy
+
+Nectarine
+
+Northern Lights
+
+Nacho
+
+Niagara Falls
+
+Nacho Pepper
+
+Nickel
+
+Niagara Teal
+
+Oak
+
+Organic
+
+Obedient Blue
+
+Oak Bonsai
+
+Oakland
+
+Olympic Blue
+
+Oberian Blue
+
+Oberina
+
+Underground
+
+Undercumber
+
+Obsidian
+
+
+[30 | 3069.48] loss=1.50 avg=2.06
+Saving checkpoint/run colorsbest.txt/model-30

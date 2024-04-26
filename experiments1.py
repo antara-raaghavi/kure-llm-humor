@@ -16,11 +16,11 @@ sess = gpt2.start_tf_sess()
 gpt2.finetune(sess,
               file_name,
               model_name=model_name,
-              steps=40,
+              steps=30,
               restore_from='fresh',
               run_name=f'run {file_name}',
               print_every=5,
-              sample_every=10,
+              sample_every=2,
               save_every=20
               )
 

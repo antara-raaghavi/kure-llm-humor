@@ -1,0 +1,2374 @@
+Requirement already satisfied: pip in /n/home04/antara/myenv/lib/python3.10/site-packages (22.3.1)
+Requirement already satisfied: gpt_2_simple in /n/home04/antara/myenv/lib/python3.10/site-packages (0.8.1)
+Requirement already satisfied: tensorflow>=2.5.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (2.16.1)
+Requirement already satisfied: regex in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (2024.4.16)
+Requirement already satisfied: requests in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (2.31.0)
+Requirement already satisfied: tqdm in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (4.66.2)
+Requirement already satisfied: numpy in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (1.26.4)
+Requirement already satisfied: toposort in /n/home04/antara/myenv/lib/python3.10/site-packages (from gpt_2_simple) (1.10)
+Requirement already satisfied: google-pasta>=0.1.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (0.2.0)
+Requirement already satisfied: astunparse>=1.6.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (1.6.3)
+Requirement already satisfied: flatbuffers>=23.5.26 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (24.3.25)
+Requirement already satisfied: tensorboard<2.17,>=2.16 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (2.16.2)
+Requirement already satisfied: h5py>=3.10.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (3.11.0)
+Requirement already satisfied: setuptools in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (65.5.0)
+Requirement already satisfied: grpcio<2.0,>=1.24.3 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (1.62.2)
+Requirement already satisfied: libclang>=13.0.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (18.1.1)
+Requirement already satisfied: wrapt>=1.11.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (1.16.0)
+Requirement already satisfied: termcolor>=1.1.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (2.4.0)
+Requirement already satisfied: ml-dtypes~=0.3.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (0.3.2)
+Requirement already satisfied: six>=1.12.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (1.16.0)
+Requirement already satisfied: protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<5.0.0dev,>=3.20.3 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (4.25.3)
+Requirement already satisfied: packaging in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (24.0)
+Requirement already satisfied: keras>=3.0.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (3.3.2)
+Requirement already satisfied: gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (0.5.4)
+Requirement already satisfied: absl-py>=1.0.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (2.1.0)
+Requirement already satisfied: tensorflow-io-gcs-filesystem>=0.23.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (0.36.0)
+Requirement already satisfied: typing-extensions>=3.6.6 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (4.11.0)
+Requirement already satisfied: opt-einsum>=2.3.2 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorflow>=2.5.1->gpt_2_simple) (3.3.0)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from requests->gpt_2_simple) (2.2.1)
+Requirement already satisfied: certifi>=2017.4.17 in /n/home04/antara/myenv/lib/python3.10/site-packages (from requests->gpt_2_simple) (2024.2.2)
+Requirement already satisfied: idna<4,>=2.5 in /n/home04/antara/myenv/lib/python3.10/site-packages (from requests->gpt_2_simple) (3.7)
+Requirement already satisfied: charset-normalizer<4,>=2 in /n/home04/antara/myenv/lib/python3.10/site-packages (from requests->gpt_2_simple) (3.3.2)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from astunparse>=1.6.0->tensorflow>=2.5.1->gpt_2_simple) (0.43.0)
+Requirement already satisfied: rich in /n/home04/antara/myenv/lib/python3.10/site-packages (from keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (13.7.1)
+Requirement already satisfied: optree in /n/home04/antara/myenv/lib/python3.10/site-packages (from keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (0.11.0)
+Requirement already satisfied: namex in /n/home04/antara/myenv/lib/python3.10/site-packages (from keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (0.0.8)
+Requirement already satisfied: markdown>=2.6.8 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorboard<2.17,>=2.16->tensorflow>=2.5.1->gpt_2_simple) (3.6)
+Requirement already satisfied: werkzeug>=1.0.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorboard<2.17,>=2.16->tensorflow>=2.5.1->gpt_2_simple) (3.0.2)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from tensorboard<2.17,>=2.16->tensorflow>=2.5.1->gpt_2_simple) (0.7.2)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from werkzeug>=1.0.1->tensorboard<2.17,>=2.16->tensorflow>=2.5.1->gpt_2_simple) (2.1.5)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from rich->keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /n/home04/antara/myenv/lib/python3.10/site-packages (from rich->keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (2.17.2)
+Requirement already satisfied: mdurl~=0.1 in /n/home04/antara/myenv/lib/python3.10/site-packages (from markdown-it-py>=2.2.0->rich->keras>=3.0.0->tensorflow>=2.5.1->gpt_2_simple) (0.1.2)
+action_movies.txt
+Loading checkpoint models/124M/model.ckpt
+Loading dataset...
+dataset has 2385 tokens
+Training...
+======== SAMPLE 1 ========
+oc a lot and they can't use it! Don't worry about that, I'd like to try it all again so I don't have to."
+
+Rudolph got his own idea to do this thing.
+
+"If you're feeling like you've been denied my trust and I'll let you do this, I'm all set. And I'm not going to sit around and make a bad argument about things. I'm going to do it, I have my friends here, but I'm going to do it myself."
+
+That was the plan. You know, people like watching their loved ones die in an ambulance, and it's really cool. It was great and it was hilarious, but the whole concept behind it was not quite real enough; it wasn't something I thought about at that point. I thought about trying a little at the beginning, like, "This is going to be funny, but I would never say no to it unless he got a couple of heads on his ass just as I did." I think I could've come up with something more than the idea to try it, but it just didn't come together.
+
+There were a couple of things he made that I just thought might work out better than what we're used to to. One was, he had to put the ball down, he could only touch it. But I think the other thing that I made is we go out there and get the ball to put, and the ball hits the ground, and it hits the ground, and there's two guys standing there, and he's hit the ground, but they're not the two guys that hit the field, and nobody hit and they're still doing what they're doing. Like, I'm like, "He came up to my place as soon as the ball is down. He didn't have to. I didn't have to hit him. He's going to have to get to your place, and I'm going to get hit."
+
+And he went down there, and it was all over. And it's about 20 seconds before the ball hits the ground. Not a good call. You guys are going to go down there and do it, and if there's a guy down there, they have to get back there, and he has to get back to his place.
+
+So it was a little different than how his other buddies started out, and it went through the roof. So his buddies were up there, and he had to move down, and it was a lot easier to move down than the one over on the wall. Not even the other guys were up there doing the run. He had to do it in time.
+
+He had to just get out there to the side before he had a chance to put the ball down. So you just can't go anywhere else until that ball hits the ground. That doesn't sound much like what people say when you're in a boxing ring. But it's a lot better than the way he did it.
+
+That first time we went down there, I was a whole mess on the floor. It was pretty hard. He had to move his hands up, and they just dropped, and I was just like, well, there he goes, there he goes, there he goes on, and I had to push him with one hand. He dropped hard. He did it right up close, and then they dropped hard to the side, and he was like, well, no. I just pushed. I got a little too hot. So he held my hand with one hand and he held his hand with the other, and then I started to do a little push. And I think he was getting more hot, but my fingers were still a little way off.
+
+That second time, he's like, "Well, I was just gonna take care of the rest, man! I'm gonna cut it off if I make a mistake or get caught." He was like, "You know what, you can't do that. If you get caught, I'll cut you off."
+
+And I just kept saying I can't do that, and he kept throwing the ball too hard, and I got one of my hands stuck in the ring with that, and that just took my hand off the ring, and that gave me the heat.
+
+He would try to push and pull his hands away from mine, and I got the weight of a gun down, and I just kept pushing it. He'd pull and pull again. And when I got the weight of it down, he was like, "You got me. You got me. I got the weight of a gun down." I was like, "No. No, it's no. I can't do a shot."
+
+He had my body on the way down, and I took one of his long shots. I'd just started to slide across the floor to try and get it into my body. I felt like
+
+======== SAMPLE 1 ========
+Brave (The Shining) 2-Up (The Shining) 2-Up (The Shining) 2-Up (The Shining) 2-Up (The Shining) 2-Backed (The Shining) 2-Backed (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining) 2-Fronted (The Shining, Jr.). 2-Fronted (The Shining) 2-Fronted (The Shining, Jr.). 2-Fronted (The Shining) 2-Fronted (The Lazy Ones) 2-Fronted (The Lazy Ones) 2-Fronted (The Lazy Ones) 2-Fronted (The Lazy Ones) 2-Fronted (The Lazy Ones) 2-Fronted (The Lazy Ones) 2-Fronted (The Lazy Ones) 2-Fronted (The Lazy Ones) 2-Fronted (The Lazy Ones) 2-Fronted (The Lazy Ones) 2-Fronted (The Lazy Ones) 2-Fronted (The Rumbler Men), 2-Fronted (The Rumbler Men), 2-Fronted (The Rumbler Men), 2-Fronted (The Rumbler Men,) 2-Fronted (The Rumbler Men,) 2-Fronted (The Rumbler Men,) 2-Fronted (The Rumbler Men.), 2-Fronted (The Rumbler Men.), 2-Fronted (The Rumbler Men.), 2-Fronted (The Rumbler Men.), 2-Fronted (The Rumbler Men.) 3-A-Shinny, The Lazy Ones 2-Fronted (The Lazy Ones), 2-Fronted (The Lazy Ones) 2-Fronted (The Lazy Ones), 2-Fronted (The Lazy Ones), 2-Joinin' 3-A-Shinny, The Lazy Ones 2-Fronted (The Lazy Ones), 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones), 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones), 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones), 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones.), 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones,) 2-Fronted (The Lazy Ones.), 2
+
+[5 | 494.62] loss=2.56 avg=2.56
+======== SAMPLE 1 ========
+The Sudden Impact episode
+
+Dana's Revenge Episode V
+
+Dante and the Devil May Cry: Red Vs Blue
+
+Dante and the Secret Weapon
+
+Doctor Strange
+
+Doctor Strange: Shattered Memories
+
+Dante vs. the Forces of Evil: Resurrection
+
+Sons of Anarchy
+
+The Devil's Own
+
+The Devil's Own II
+
+The Day of the Dragon
+
+The Matrix
+
+The Evil Dead 2
+
+The Last of the Mohicans
+
+Terminator: The Terminator
+
+Batman: The Killing Joke
+
+Batman: The Flash
+
+Batman Begins
+
+Batman and Robin
+
+The Devil's Backbone 2
+
+Superman
+
+Superman: The Animated Series
+
+Boys Town
+
+Batman Returns
+
+Batman V Superman: Dawn of Justice
+
+Batman: The Last of the Mohicans
+
+Superman: New Frontier
+
+Superman
+
+Superman Beyond Earth 2
+
+Batman: New Warriors
+
+Batman: The Last of the Mohicans
+
+Batman: The Flash
+
+The Big Kale
+
+Batman: The Mask of Death
+
+Batman: The Mastermind
+
+Batman: The Return of the King
+
+The Day of the Dragon
+
+Batman: The Movie
+
+Batman: The First Avenger
+
+Batman: The Warrior
+
+Batman: the Animated War
+
+Avengers: The Age of Extinction
+
+Inherent Vice
+
+Avengers: The Movie
+
+Avengers: Age of Extinction
+
+Alien: First Contact
+
+Avatar: The Last Airbender
+
+Avatar: The Shadow of the Colossus
+
+The Avengers: The First Order
+
+Avatar: The Shadow of the Colossus
+
+Battlefield 1942
+
+Battlefield: First Strike
+
+Battlefield: War Thunder
+
+Battlefield: Warzone
+
+Battlefield World
+
+Battlefield: The Line
+
+
+Battlefield: Death Match
+
+Battlefield: V for Vendetta
+
+Star Wars: Battlefront III
+
+Star Wars: Episode I - The Phantom Menace
+
+Star Wars: Episode II - Attack of the Clones
+
+Star Wars: Episode III - Revenge of the Sith
+
+Star Wars: Episode IV - Return of the Jedi
+
+Star Wars: Episode V - The Force Strikes Back
+
+Star Wars: Episode VI - Attack of the Clones
+
+Star Wars: Episode VII - Attack of the Clones
+
+Star Wars: Episode VIII - Return of the Jedi
+
+Star Wars: Episode X-Men: Days of Thunder
+
+Star Wars: Episode XI - The Last of the Mohicans
+
+Star Wars: Episode XX - The War of the Worlds
+
+Star Wars: Episode XX - The Empire Strikes Back
+
+Star Wars: Episode XX - A New Hope
+
+
+Star Wars: Episode The Phantom Menace
+
+
+Star Wars: Episode I - Return of the Sith
+
+Star Wars: Episode II: The Phantom Menace
+
+
+Star Wars: Episode III - Battlefront III
+
+Star Wars: Episode IV - The Phantom Menace
+
+
+Star Wars: Episode V - Return of the Jedi
+
+Star Wars: Episode VI - Attack of the Clones
+
+Star Wars: Episode VII - Attack of the Clones<|endoftext|>It wasn't always easy to pull a stunt with a big name, but this is definitely one.
+
+As he stood atop the National Mall with his friends, an announcer from Disneyworld shouted, "What's up, buddy?"
+
+In an attempt to get attention (and, frankly, get the attention of a huge number of American women) the young comedian and the cast of his latest Disney Channel series will throw something at the crowd.
+
+
+The first act will be a show about real life in the real world, featuring the likes of Ricky Gervais, Elton John, Bill Murray, and Jim Carrey.
+
+The second act will feature the likes of Will Ferrell, Woody Allen, Ben Affleck, and Robert De Niro.
+
+The third one is all about a gang of drunk women (with a twist, of course), with a twist, of course, that will make them all look good.
+
+It'll be at a place called The Bistro.
+
+There's the whole "Ladies Only" crowd who were just going to eat at the famous Italian restaurant.
+
+And I have this guy called "Ronnie" (yes, I have a problem with this name!) who has two kids. He's an actor and he's also gay. He's just been on the set for about 15 years.
+
+But you know what?
+
+He's got a guy named Rocky who goes through puberty, but he's not trying to hide that. He's trying to hide that all of the time.
+
+He's not trying to get on an airplane and start shooting the gun in the sky.
+
+He's tried
+
+======== SAMPLE 1 ========
+ination (DOD 1.0) and Nighthawks (Nighthawks 2.0).
+
+For the next 20 years, we will see another version of that. There will be more of this, at the very top. This was also in 2004, when, according to The New York Times, the CIA offered up the most dramatic of its many scenarios; in this scene of despair, the CIA wants Osama bin Laden dead and the rest of the world can only watch.
+
+This one, more than any other, was a surprise. The plan was put together from scratch: the man who'd helped kill 10,000 people. With the help of a team from the CIA, a team of SEALs, and with just a few hundred thousand dollars in the bank, the mission would come down to a simple question:
+
+Can you kill 10,000 people with a single drone and no human risk of injury? Sure, of course.
+
+But this one was even more dramatic.
+
+The CIA was told that by killing every American on an airplane, Osama bin Laden was taking on the form of "a very violent, violent person who would tear a man down." It became clear that the first real challenge in this game would be to prevent the execution of the man who'd helped save the lives of 10,000 people.
+
+This is something that you never know. You want a guy like George Bush to go down with four or five bullet wounds and be at rest for 20 minutes. If he's hit, his head is almost entirely covered in blood. It's the kind of thing you think of when you see a person kill 10 people.
+
+And, while Bush's first kill was from a M2, this was a major point toward being a better man. The CIA had to be smart; they needed a way to bring down bin Laden without killing him.
+
+But the CIA wasn't so smart on this one, either.
+
+In the first shot of the chase, in the same scene where the original version was filmed the whole time, the Nighthawks and the M2 were the most powerful of the six. They were the fastest, and they ran so quickly.
+
+And they shot fast with only one aim: They were going for bin Laden.
+
+This scene of a single shot, this one, took place in midair. I got a sense of what it would mean. The first time it happened, I walked up on bin Laden, and I just couldn't let go. I'd come up like a duck, and a lot of people were staring.
+
+I had just been shot in the back and I didn't think twice about whether I was going to come back or if I was going to come back in to shoot bin Laden. We were on the roof, and I just felt like there was a tremendous pain in my stomach, because I couldn't breathe. I couldn't even breathe, because I was too tired and could not breath. I thought about going into a hotel or something. I said, "Well, don't come back. We're going to go through this, and I'm not going to make it back alive." All I wanted to do was feel good, and I did.
+
+I never wanted to be in a movie. I just wanted to be with my family.
+
+This is the same situation where you have an actual bullet, and you try to come from behind and put up a good fight, and then you hear the shots for the first time. It could've been very different; it could've been very different. It could've been very different. It could've been much, much worse.
+
+But as quickly as the bullets and bullets came, you start to believe that the enemy is a terrorist, and your goal has to be thwarted in some kind of attempt to blow up a city.
+
+So you fight your ass off. There's not even a way to make it out alive. And because the enemy is a terrorist, you're always gonna have to get your ass in some sort of fight.
+
+I had already gotten the most out of that fight, and I thought, If I'm gonna get out on top, I'm gonna get a lot out of that fight, and I just didn't want to get out of the fight.
+
+The last two or three minutes of the chase, I just couldn't get my ass in. I heard the gunshots, and I thought, This could've been a different movie. This could've been one of those crazy things about watching a movie where everybody was the same.
+
+But I knew it was, at the time, a long shot. It was one of the most difficult movies I ever saw, and I just wanted to watch it.
+
+You know, I think that's all I had in my head, because I was playing The Godfather V: The Secret Service.
+
+The first time I did this movie at
+
+[10 | 979.89] loss=1.72 avg=2.14
+======== SAMPLE 1 ========
+ Zone of the Rocks
+The Big N
+Inheritance
+The Master
+The Big Short
+Star Trek: Enterprise
+The Terminator
+The Wrath of Khan
+Twist and Dope 3D
+U-571
+Zero Bullets
+A Dog's Purpose
+The Godfather: Part III
+One and Done
+In Blood, Water, and On
+The Godfather: Part IV
+The Wolf of Wall Street
+The Guns of Wool
+Black & White: Part I
+The New World Order
+Escape from Bad F***
+The Devil's Own
+The Devil's Own 2nd Quarter
+The New York Red:
+The Hunt for Red October
+A Room with a Chance of Meatballs
+One Shot
+M.I.M.D.
+Menace
+Zero Dark Thirty
+Zero
+Anaconda
+Alligator
+The Devil's Own
+Anaconda
+Heaven's Not Dead
+Zac City
+The Mask
+Anaconda
+Zorro
+Zorro
+Boys
+Zorro
+Menace
+Zorro
+Aquaman
+The Long Kiss Goodnight
+Star Trek: First Contact
+Alligator
+Star Trek: First Contact 2
+Star Trek: First Contact 3
+The Hunt for Red October
+Star Trek: Insurrection
+The Hurt Locker
+Zero Dark Thirty-Nine
+Terminator 2
+The Last of the Mohicans
+Terminator
+The Terminator 2: Judgment Day
+Terminator
+Terminator: Genisys
+Godzilla
+Godzilla
+The Lost World: Part II
+Godzilla
+The Night of the Long Kiss Goodnight
+In the Line of Duty
+Super Mario Bros. 2
+Godzilla
+Godzilla
+Raiders of the Lost Ark
+Superman<|endoftext|>This is a rush transcript. Copy may not be in its final form.
+
+AMY GOODMAN: It took some 24 hours for this to actually happen. The Associated Press reports that three people are dead, more than 800 people killed, including members of the U.S. Navy.
+
+The AP reports, quote, "All but three of the victims were American citizens. Two were in Iraq.
+
+"They were in critical condition," and that includes their family members.
+
+LENNY W. GRAY: It was devastating that so many American soldiers died on the battlefield.
+
+TARRATTA P. CAMPBELL: It was so devastating that so many of our troops were killed.
+
+TENNIS HAYWARD: It was so devastating that we lost nine lives and seven civilian lives.
+
+AMY GOODMAN: Not only in the United States, but also outside, what exactly is the United States doing that is so lethal?
+
+TENNIS HAYWARD: Well, the United States of America is a government program of the government. The government takes its orders from the executive officers of the Office of Management and Budget. And so you have the president, the President of the United States, who takes those orders.
+
+This executive order's a very difficult thing. First of all, it's a very frightening order, so I thought it would just be fun. I tried to imagine having a big, big army of law enforcement officers on the street, with guns drawn and all, looking, and asking the question, What the hell are these people doing? I didn't see a single sign of mercy. One or two are dead.
+
+Then there isn't much mercy. What's so fascinating about the world is the incredible intensity of violence directed at those very same people. I mean, what the bloody, brutal nature of that has to do with what the president, the president of the United States, says to the country, for the rest of his life.
+
+In my mind, the reason he said that was for political reasons. It's because his character, as I said, is at once, if not ultimately, horrific.
+
+He's the most brutal of all human beings. You have to put a stop to it to find out whether we're really killing anyone. So I think it's an insane world.
+
+But the worst part is that if this president decides to continue to threaten to kill, he goes out of his way to kill, and he really makes this threat.
+
+But I think if he could get to that point to convince the rest of us, as President Bush did, that the United States needs to do more to put people under siege, that the U.S. military needs to be expanded, that the American military needs to be strengthened, that the First Amendment requires to protect American property, I hope and pray that our nation, through law, is able to stand a chance of victory in this war.
+
+I think that one of the greatest things we can achieve is a more peaceful world. The United States has a better chance, I would remind you, just because of the fact that, you know, the government has lost the battle. But I think that
+
+======== SAMPLE 1 ========
+
+
+Escape Velocity
+
+First Strike
+
+Out Run
+
+Rambo: Night Of Blood
+
+King of New York
+
+King Kong and the Temple of Doom
+
+King Kong: Skull Island
+
+King Kong Returns
+
+King Kong: Rakefoot
+
+King Kong: The Force Awakens
+
+The Lost World: Jurassic Park
+
+The Rocketeer
+
+The Rocketeer II
+
+King Kong and the Temple of Doom
+
+The Adventures of Robin Hood
+
+The Adventures of Robin Hood III
+
+The Rocketeer IV
+
+The Wolf of Wall Street
+
+King Kong
+
+King Kong Returns
+
+King Kong: The Movie
+
+King Kong and the Force
+
+King Kong's Run
+
+King Kong's Trag: City
+
+King Kong's War
+
+King Kong's Warrior One
+
+King Kong's War II
+
+King Kong: Skull Island
+
+The Lost World: Jurassic Park
+
+Teenage Mutant Ninja Turtles
+
+Teenage Mutant Ninja Turtles II
+
+Teenage Mutant Ninja Turtles III
+
+Teenage Mutant Ninja Turtles IV
+
+Teenage Mutant Ninja Turtles V
+
+Teenage Mutant Ninja Turtles VI
+
+Teenage Mutant Ninja Turtles VII
+
+Teenage Mutant Ninja Turtles VIII
+
+Alien
+
+The Terminator
+
+Armageddon
+
+The Lord of the Rings: The Fellowship of the Ring
+
+Arachnophobia
+
+Godzilla
+
+Godzilla
+
+Beverly Hills Ninja
+
+Beverly Hills Ninja II
+
+Beverly Hills Ninja III
+
+Beverly Hills Ninja IV
+
+Beverly Hills Ninjago: First Blood Part II
+
+Lethal Weapon: Fear and Loathing in Las Vegas
+
+Lethal Weapon: Fear and Loathing in Las Vegas III
+
+Beneath the Planet of the Apes
+
+The Godfather: Part I
+
+The Dark Knight Rises
+
+Heaven's Burning
+
+Godzilla
+
+The Godfather: Part II
+
+Godzilla
+
+The Godfather III
+
+Godzilla
+
+The Godfather: Part IV
+
+Fire Down Below
+
+Fire Down Below 2
+
+Fire Down Below 3
+
+Fire Down Below 4
+
+Fire Down Below 5
+
+Fire Down Below 6
+
+Fire Down Below 7
+
+Fire Down Below 8
+
+Fire Down Below 9
+
+Fire Down Below 10
+
+Fire Down Below 11
+
+Fire Down Below 12
+
+Fire Down Below 13
+
+Fire Down Below 14
+
+Fire Down Below 15
+
+Fire Down Below 16
+
+Fire Down Below 17
+
+Fire Down Below 18
+
+Fire Down Below 19
+
+Fire Down Below 20
+
+Fire Down Below 21
+
+Fire Down Below 22
+
+Fire Down Below 23
+
+Fire Down Below 24
+
+Fire Down Below 25
+
+Fire Down Below 26
+
+Fire Down Below 27
+
+Fire Down Below 28
+
+Fire Down Below 29
+
+Fire Down Below 30
+
+Fire Down Below 31
+
+Fire Down Below 32
+
+Fire Down Below 33
+
+Fire Down Below 34
+
+Fire Down Below 35
+
+Fire Down Below 36
+
+Fire Down Below 37
+
+Fire Down Below 38
+
+Fire Down Below 39
+
+Fire Down Below 40
+
+Fire Down Below 41
+
+Fire Down Below 42
+
+A Day to Remember
+
+The Crowbar
+
+The Princess and the Frog
+
+Conan the Barbarian
+
+Conan the Barbarian 2
+
+Conan the Barbarian 3
+
+Conan the Barbarian 4
+
+Conan the Barbarian 5
+
+Conan the Barbarian 6
+
+Conan the Barbarian 7
+
+
+Conan the Barbarian 8
+
+Conan the Big Hit
+Conan the Big Hit 2
+
+Conan The Barbarian 3
+
+Conan the Big Hit 4
+
+Conan The Big Hit 5
+
+Conan The Big Hit 6
+
+Conan The Big Hit 7
+
+
+Conan the Big Hit 8
+
+Conan the Big Hit 9
+
+Conan The Big Hit 10
+
+Conan The Big Hit 11
+
+Conan The Big Hit 12
+
+Conan The Big Hit 13
+
+Conan The Big Hit 14
+
+Conan The Big Hit 15
+
+Conan The Big Hit 16
+
+Conan The Big Hit 17
+
+Conan The Big Hit 18
+
+Conan The Big Hit 19
+
+The Devil's Own
+The Thing
+
+Warriors of Virtue
+
+The Lost World
+
+Warriors of Virtue II
+
+The Great Gatsby
+
+Men
+
+Men 2.0
+
+Men 3.0
+
+Men of Means
+Godzilla
+
+Godzilla
+
+Godzilla
+
+Godzilla
+
+Godzilla 2
+
+Godzilla 3
+
+Godzilla 4
+
+Godzilla 5
+
+Godzilla 6
+
+Godzilla 7
+
+Godzilla 8
+
+Mr. Nice Guy
+
+Men With
+
+======== SAMPLE 1 ========
+Bad of the Spotless City"
+
+In Her A Chance to Kill
+
+Inspector Gadget
+
+Inspector Gadget 2
+
+Inspector Gadget 3
+
+Inspector Gadget 4
+
+Inspector Gadget 5
+
+First Strike
+
+Inspector Gadget 3
+
+Inspector Gadget 4
+
+Star Trek VI: The Undiscovered Country
+
+Inspector Gadget
+
+Inspector Gadget 2
+
+Inspector Gadget 3
+
+Inspector Gadget 4
+
+First Strike
+
+First Strike 2
+
+First Strike 3
+
+First Strike 4
+
+First Strike 5
+
+Inspector Gadget
+
+Inspector Gadget 2
+
+Inspector Gadget 3
+
+Star Trek: Insurrection
+
+Inspector Gadget
+
+Inspector Gadget 2
+
+Inspector Gadget 3
+
+Inspector Gadget 4
+
+First Strike
+
+First Strike 2
+
+First Strike 3
+
+First Strike 4
+
+First Strike 5
+
+Inspector Gadget
+
+Inspector Gadget 2
+
+Inspector Gadget 3
+
+Star Trek VI: The Undiscovered Country
+
+Inspector Gadget
+
+Third Strike
+
+Third Strike 2
+
+Third Strike 3
+
+Third Strike 4
+
+Third Strike 5
+
+Inspector Gadget
+
+Inspector Gadget 2
+
+Inspector Gadget 3
+
+Star Trek: Insurrection
+
+Inspector Gadget
+
+First Strike
+
+First Strike 3
+
+First Strike 4
+
+First Strike 5
+
+Inspector Gadget
+
+Inspector Gadget 2
+
+Inspector Gadget 3
+
+Star Trek V: The Seven Deadly Sins
+
+Inspector Gadget
+
+First Strike
+
+First Strike 2
+
+First Strike 3
+
+First Strike 4
+
+First Strike 5
+
+Inspector Gadget
+
+Inspector Gadget 2
+
+Inspector Gadget 3
+
+Star Trek: Insurrection
+
+Inspector Gadget
+
+First Strike
+
+First Strike 2
+
+First Strike 3
+
+First Strike 4
+
+First Strike 5
+
+Inspector Gadget
+
+Inspector Gadget 2
+
+Inspector Gadget 3
+
+Star Trek: Bridge Crew
+
+Inspector Gadget
+
+Inspector Gadget 2
+
+Inspector Gadget 3
+
+Starship Troopers: First Blood Part II
+
+Starship Troopers
+
+Starship Troopers II
+
+Starship Troopers III
+
+Starship Troopers IV
+
+Starship Troopers V
+
+Starship Troopers VI
+
+Starship Troopers VII
+
+Starship Troopers VIII
+
+Starship Troopers X
+
+Starship Troopers XI
+
+Starship Troopers XII
+
+Starship Troopers XIII
+
+Beverly Hills: Bodyguard
+
+Inspector Gadget
+
+Inspector Gadget
+
+Inspector Gadget 2
+
+Inspector Gadget 3
+
+Inspector Gadget 4
+
+Inspector Gadget 5
+
+Inspector Gadget 6
+
+Beverly Hills
+
+Inspector Gadget
+
+Inspector Gadget 2
+
+Inspector Gadget 3
+
+Inspector Gadget 4
+
+Inspector Gadget 5
+
+Inspector Gadget 6
+
+From Dusk Til Dawn
+From Dusk Til Dawn
+
+From Dusk Till Dawn
+
+From Darkness Till Dawn
+
+From Beyond
+
+From Beyond
+
+From Mars Attacks!
+
+Inspector Gadget
+
+Inspector Gadget 2
+
+Inspector Gadget 3
+
+Inspector Gadget 4
+
+Inspector Gadget 5
+
+Inspector Gadget 6
+
+Inspector Gadget 7
+
+Inspector Gadget 8
+
+Inspector Gadget 9
+
+Inspector Gadget 10
+
+Inspector Gadget 11
+
+Inspector Gadget 12
+
+Inspector Gadget 13
+
+Inspector Gadget 14
+
+Inspector Gadget 15
+
+Inspector Gadget 16
+
+Inspector Gadget 17
+
+Inspector Gadget 18
+
+Inspector Gadget 19
+
+Inspector Gadget 20
+
+Inspector Gadget 21
+
+Inspector Gadget 2
+
+Inspector Gadget 3
+
+Inspector Gadget 4
+
+Inspector Gadget 5
+
+Inspector Gadget 6
+
+Inspector Gadget 7
+
+Inspector Gadget 8
+
+Inspector Gadget 9
+
+Inspector Gadget 10
+
+Inspector Gadget 11
+
+Inspector Gadget 12
+
+Inspector Gadget 13
+
+Inspector Gadget 14
+
+Inspector Gadget 15
+
+Inspector Gadget 16
+
+Inspector Gadget 17
+
+Inspector Gadget 18
+
+Inspector Gadget 19
+
+Inspector Gadget 20
+
+Inspector Gadget 21
+
+Inspector Gadget 2
+
+Mortal Kombat
+
+Mortal Kombat II
+
+
+
+[15 | 1573.89] loss=1.24 avg=1.84
+======== SAMPLE 1 ========
+ Conquer: New Orleanum
+The Battle for the Planet of the Apes
+The Big Hit: Jurassic Park
+Star Wars: Episode Venya
+Jaws
+Jaws 2: The Game
+Jaws 3: The Bad and The Ugly Good
+Supercop
+The Terminator
+The Terminator: Judgment Day
+Terminator 2
+Jaws 3: The Longest Night
+Terminator 3: Sin City
+Terminator: The Game
+Butch Cassidy and the Sundance Kid
+Butch Cassidy and the Sundance Kid 2
+Butch Cassidy and the Sundance Kid 3
+Butch Cassidy and the Sundance Kid 4
+Butch Cassidy and the Sundance Kid V
+Jaws
+The Devil's Own
+Jaws
+The Jewel of the Nile
+Jaws 3
+The Karate Kid
+Jaws 4
+Jaws 5
+The Legend of Tarzan
+Jaws 6
+Jackie Chan's First Strike
+Jaws 7
+Mad Men
+Mad Men II
+Mad Men III
+Mad Men IV
+Aliens
+Raiders of the Lost Ark
+Raiders of the Stone Age
+The Beach
+Alien
+Aliens
+Godzilla
+Godzilla
+Blade
+Army of Darkness
+Army of Darkness II
+Army of Darkness 3
+Army of Darkness 4
+In the Line of Fire
+In the Line 2
+In the Line 3
+In the Line 4
+Time Tracers
+Time Tracers 2
+Time Tracers 3
+Time Tracers 4
+Time Tracers 5
+The Big Hit
+The Abyss
+Time Tracers
+Time Tracers 2a
+Time Tracers 3a
+Time Tracers 4a
+The Big Hit: Iron Eagle
+The Jackal
+The Jackal 2
+The Jackal 3
+The Voyage of Sullen Lullen O' Dinney
+Starship Troopers
+Star Trek: Insurrection
+Star Trek IV: The Search for Spock
+Star Trek V: The Final Frontier
+Star Trek III: The Search for Spock II
+Spock 2
+Spock 3
+The War of the Worlds
+The Voyage Home
+Blues Brothers
+Rocky
+Beverly Hills Ninja
+Cyrano de Bergerac
+Bird of Prey
+Blues Brothers 2
+Blues Brothers 3
+The Siege
+Indiana Jones and the Temple of Doom
+A View to a Kill
+Tron
+Logan's Run
+Logan's Run II
+Logan's Run III
+Logan's Run IV
+Heaven and Earth
+The Voyage Home
+The Voyage Down
+Heaven's Burning
+Mortal Kombat: Annihilation
+Mortal Kombat: Annihilation 2
+Mortal Kombat: Annihilation 3
+Indiana Jones and the Temple of Doom
+
+
+Batman Returns
+Face/Off
+Face/Off II
+Face/Off III
+Face/Off 4
+Face/Off 5
+Face/Off 6-Inch Guardians
+Batman Returns
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Off
+Face/Out of Sight
+Logan's Run
+Logan's Run II
+Logan's Run III
+Logan's Run IV
+Logan's Run V
+Logan's Run VI
+Under Siege
+The Siege
+Under Siege 2
+Under Siege 3
+Overlord
+The Siege II
+Under Siege 3
+The Lost World: Jurassic Park
+The Lost World: Jurassic Park II
+The Lost World: Jurassic Park 3-D
+The Lost World: Jurassic Park 4-D
+Six Samurai
+In the Line Of Duty 7
+Six Sides
+The Avengers
+The Fifth Element
+Captain America
+Avengers: Infinity War
+The Avengers
+The Avengers 2
+The Avengers 3
+The Avengers 4-D
+The Avengers: Iron Eagle
+The Avengers: Iron Will
+Iron Eagle
+
+King of New York
+Highlander
+In the Line of Duty 7
+Highlander 2
+Iron Eagle
+
+Men of Means
+Highlander III
+
+Men of Means II
+
+Iron Eagle
+
+Iron Will
+
+Iron Eagle III
+
+Iron Eagle IV
+
+Iron Eagle V
+
+Iron Eagle VI
+
+Highlander
+
+King of New York
+
+Jaws
+King of New York
+
+Highlander II
+
+Highlander III
+
+Highlander IV
+
+The Golden Child
+Lethal Weapon 4
+Lethal Weapon 5
+Lethal Weapon 6
+Lethal Weapon 7
+Lethal Weapon 8
+Lethal Weapon 9
+Lethal Weapon 10
+The Game Over
+
+======== SAMPLE 1 ========
+BA3;3rd Degree,"Red Sonja";Alien: Isolation"";Alien Resurrection";Alien: Resurrection II";Alien Resurrection III";Alien Resurrection IV: The Showdown";Conan the Barbarian";Conan the Barbarian 2";Conan the African Queen";Conan the Jungle Cop";The Big Hit";Supercop;Sanjuro";The Omega Code";Warriors of Virtue";Batman";Red Sonja";Conan the Barbarian";Conan the Barbarian Returns";Conan the African Queen";Conan the Omega Code";The Fugitive";Conan the World's Raisin Man";Assassination 2: High Noon On Mega Mountain";Assassination 3: Deadly Quagmire";Battle for the Planet of the Apes";The Last of the Mohicans";Blown Away";Black Dog";Battle for the Planet of the Apes II";Battle for the Planet of the Apes III";The Thin Red Line";The Godfather";Raiders of the Lost Ark";Deep Rising";Firestorm";Dragonheart";Alien³";Star Trek: Insurrection";Star Trek: The Motion Picture"";Indiana Jones and the Cursed Forest";Operation Condor";Operation Condor 2";Operation Condor 3";Operation Condor 4";Operation Condor V";The Jewel of the Nile";The Man in the Iron Mask";The Siege";Tokyo Fist";Battle for the Planet of the Apes";Star Trek: The Wrath of Khan";Star Trek: The Wrath of Khan II";Star Trek: The Wrath of Khan III";Star Trek: The Wrath of Khan IV: The Voyage Home";Star Trek Generations";Star Trek: The Wrath of the Force";Star Trek VI: The Undiscovered Country"";Star Trek V: The Final Frontier";Star Trek III: The Search for Spock";Star Trek IV: The Voyage Home";Star Trek V: The Final Frontier II"";Star Trek I: The Wrath of Khan";Star Trek III: The Search for Spock";Star Trek IV: The Voyage Home";Star Trek III: The Silver Sun";Star Trek V: The Three Musketeers";Star Trek VI: The Undiscovered Country";Star Trek III: The Search for Spock";Star Trek IV: The Voyage Home";Star Trek III: The Silver Sun";Star Trek III: The Omega Drop";Star Trek III: The Sin No Longer Fear";Star Trek IV: The Wrath of Khan";Star Trek III: The Search for Spock";Star Trek III: The Wrath of Khan II";Star Trek III: The Search for Spock III";Star Trek III: The Search for Spock IV;Star Trek III: The Search for Spock V";Star Trek III: The Defiant";Star Trek II: The Wrath of Khan I"";Star Trek II: The Wrath of Khan II";Star Trek II: The Wrath of Khan IªM";Star Trek II: The Wrath of Khan I´E";Star Trek I: The Wrath of Khan III;Star Trek III: The Search for Spock";Star Trek III: The Search for Spock IV;Star Trek I: The Wrath of Khan V";Star Trek III: The Search for Spock VI;Star Trek III: The Search for Spock VII";Star Trek III: The Voyage Home";Star Trek II: The Battle of the Bulge";Star Trek III: The Siege of New York";Star Trek II: The Lost Worlds";Star Trek III: The Scrubs";Star Trek III: The Americans";Star Trek II: The Wrath of Khan";Star Trek II: The Wrath of Khan III";Star Trek II: The Wrath of Khan IV;Star Trek III: The Voyage Home";Star Trek III: The Americans";Star Trek II: The Battle of the Five Rivers";Star Trek I: The Siege of Nice St James";Star Trek I: The Siege of New York Stag";Star Trek I: The Omega In The Fire";Star Trek I: The New Origin of the Omega In The Fire";Star Trek II: The Wrath of Khan I";Star Trek I: The New Voyage of Sinbad";Star Trek I: The New World";Starship Troopers";Encounter at Farpoint";Adrenalin: Fear the Rush";Operation Saboteur";Armageddon";The Golden Child";The Omega D Men
+Inspector Gadget
+Inspector Gadget in the Line of Duty: Iron Fist
+Conquest
+Inspector Gadget
+The Golden Child
+The Omega In The Line
+Operation Condor
+Operation Condor 2
+Operation Condor 3
+Operation Condor 4
+Operation Condor 5
+Operation Condor 6
+Operation Condor 7
+Operation Condor 8
+Operation Condor 9
+Operation Condor 10
+Operation Condor 11
+Operation Condor 12
+Operation Condor 13
+Operation Condor 14
+Operation Condor 15
+Operation Condor 16
+Operation Condor 17
+Operation Condor 18
+Operation Condor 19
+The Omega V Men
+The Omega V Men II
+The
+
+[20 | 2063.87] loss=0.91 avg=1.60
+Saving checkpoint/run action_movies.txt/model-20
+======== SAMPLE 1 ========
+ron-Cross
+The Fifth Element
+The Lost World: Jurassic Park
+Blues Brothers
+Conan the Barbarian
+Daylight
+Deep Rising
+Diva
+Deep Rising II
+Deep Rising III
+Diva: Peak Pressure
+Dunkirk
+Dunkirk 2
+Deep Impact
+In God's Hands
+Into the Inferno
+One Tough Cop
+The Rock
+The Power Rangers
+Time Tracers
+Turbo: Combat
+Time Tracers II
+Turbo: Commando
+The Terminator
+The Ultimate Fighter
+Deep Impact
+Firestorm
+Firestorm II
+Firestorm III
+Fist of Rain
+The Princess Bride
+Star Wars: Episode V - The Empire Strikes Back
+Raiders of the Lost Ark
+Red Sonja
+Snake Eyes
+Firestorm 3
+Firestorm 4
+Firestorm 5
+Red Sonja! A Power Rangers Movie
+The Mummy
+The Mummy III
+The Hunt for Red October
+The Boat
+Tokuru Games
+Time Tracers
+Tron
+Time Tracers 2
+Turbo: Cruise Control
+The Transformers: The Movie
+Star Wars: Episode VI - Return of the Jedi
+Star Wars: Episode VI - Return of the C3PO
+Star Wars: Episode VII - The Empire Strikes Back
+Star Wars: Episode VII - Attack of the Clones
+Star Wars: Episode VIII - The Last of the Mohicans
+Deep Impact
+Firestorm
+Deep Impact II
+The Boondoggle
+Black Dog
+The Mask of Zorro
+Con Air
+Condorman
+The Pick
+The Bodyguard
+The Pick 2
+The Big Hit
+Diva
+Con Air
+Con Air 2
+Con Air 3: No Turning Back
+Con Air: The Quest for Peace
+Con Air: The Spirit of November
+Con Air: The Adventurer's Club
+Conan the Barbarian
+Conan the Blue Viper
+Conan the Trunk
+Conan the Tuna
+Conan the Turnkey Train
+Conan the White Whale
+Conan the Zorro
+Conan the War of the Worlds
+Conan the World's End
+Firestorm
+Firestorm 1
+Firestorm 2
+Firestorm 3-D
+Firestorm 4-D
+Firestorm 4: Omega Red
+Red Sonja!
+The Last of the Mohicans
+Lethal Weapon 4
+Lethan Longfellow
+Lethal Weapon
+The Hunt for Red October
+The Poseidon Adventure
+The Parting Shot
+Tarzan and the Lost City
+The Godfather: Part II
+The Poseidon Adventure III
+Heaven & Earth
+The Poseidon Adventure IV
+The Rocketeer
+Black Cat
+Black Mask
+Black Mask 2
+Black Mask 3-D
+Black Mask 4-D
+Red Dawn
+The Abyss
+Evil Dead II
+Evil Dead III
+Excalibur
+Evil Dead IV
+Double Jeopardy
+Evil Dead V
+Deep Rising
+The Avengers
+Deep Rising 1. I Want New Men
+Double Jeopardy 2. I Went Down
+Twin Dragons
+Wise Target
+Wing Commander
+The Mod Squad
+Wing Commander
+Wanted: Dead or Alive
+Wanted: Dead or Alive 2.3
+The Part II Karate Kid
+The Mod Squad Karate Kid 3. Rush City
+The Mod Squad
+Rush City 2. No Turning Back
+The Mod Squad
+The Mod Squad III. Dumbo Drop
+Tequila Sunrise
+Thunderball
+Alligator
+U Turn
+Deep Blue
+Buffalo 66
+U Turn II
+U Turn
+U Turn Three
+Alligator! Part II
+U Turn! U Turn Three
+U Turn 3
+U Turn 4
+U Turn! Five
+Lethal Weapon 4
+Lethan Reynolds' First Strike
+The Thing
+Blood Beach
+The Untouchables
+The Untouchables II
+The Thin Red Line
+Tequila Sunrise
+Last Man Standing
+Live and Let Die
+Air Force One
+Lethal Weapon
+Lethan Reynolds' First Strike
+Lethan Reynolds' Bodyguard
+The Untouchables
+The Untouchables III
+Lethal Weapon
+Lethan Reynolds' Lullaby
+The Matrix
+The Matrix II
+Conan the Barbarian
+Lethal Weapon 2
+Conan the Barbarian
+Lethan Reynolds' First Strike
+Lethan Reynolds' First Strike 2
+Lethan's Men
+Tequila Sunrise
+Warriors of Virtue
+Highlander
+Highlander II
+Highlander III
+Highlander IV: The Quest for Peace
+Heartbreak Ridge
+The Replacement Killers
+The Replacement Killers II
+Heartbreak Ridge
+The Replacement Killers III
+Heartbreak Ridge IV
+The Replacement Killers Next Rush
+Heartbreak Ridge
+The Replacement Killers
+Armageddon
+Beneath the Planet of the Apes
+The Godfather: Part III
+The Jewel of the Nile
+Blues Brothers
+Blues Brothers 2
+Blues Brothers 3-D
+The Matrix
+Indiana Jones and
+
+======== SAMPLE 1 ========
+ock is the name of the game. It's part survival horror and part action/adventure game, and as such needs to have some of the same feel and feel of a first-person shooter.
+
+For a long time the premise for Ghost in the Shell was the same as that of the horror novel Stranger Good, with a very violent conclusion as the villain, and the villain's main motivation for the action was his desire to kill, not to save anyone. It seems like Ghost in the Shell took a little longer because of this, but I was pretty happy with it. It also helped that its protagonist, Desmond, is from New York, and he is very well-liked by the locals.
+
+The Story
+
+The events lead up to Desmond's initial encounter with the Killer. It's a fairly straightforward scenario, and at the beginning you are in the care of the police; you know they're on a big hunt for a murderer who wants to take credit for the death of his own people. There isn't much you can say about it other than wait and see.
+
+In the course of our initial conversation it's clear that the killer, in the middle of our story, is in a car accident, going into the night, and he's hitting someone in the head or head and maybe a car. He shoots, and this person is dead in the street. The killer does not shoot. It is a pretty brutal sequence.
+
+But this isn't a simple scenario. As you know the Killer never does anything violent. He doesn't stop. It doesn't even matter. There are no bullets to shoot.
+
+In the Beginning: A Quickie
+
+The Killer Lives
+
+3-D
+
+Solo
+
+Assassination
+
+Batman
+
+Operation Dumbo Drop
+
+The Hunt for Red October
+
+The Replacement Killers
+
+Raiders of the Lost Ark
+
+Batman Returns
+
+Superman
+
+Superman II
+
+Superman III
+
+Superman IV: The Quest for Peace
+The War of the Worlds
+Time Tracers
+Top Gun
+
+The Peacemaker
+
+Terminator 2
+The Replacement Killers
+
+Alien: Resurrection
+
+Terminator Genisys
+
+Men in Black
+
+Batman
+
+Deep Blue Sea
+
+Batman & Robin
+
+Deep Impact
+
+Beverly Hills Ninja
+
+Blood Beach
+Escape from New York
+
+The Untouchables
+
+Independence Day
+
+The Pope of Greenwich Village
+
+Operation Condor
+
+Operation Dumbo Drop
+
+Con Air
+Operation Robocop
+
+Operation Sea Dog
+
+Operation Serenade
+
+Steel
+Steel II
+
+Steel III
+
+Steel IV
+
+Steel V
+
+Steel VI
+
+Steel VII
+
+Steel VIII
+
+Steel IX
+
+In the Line of Duty 2
+
+Mad City
+Mortal Kombat: Annihilation
+
+Men of Means
+
+Young Guns
+
+Young Guns 2
+
+Men With Guns
+
+Young Guns 3
+
+Minnie and Moskowitz
+
+Minnie & Moskowitz 2
+
+The Last of the Mohicans
+
+Tomorrow Never Dies
+
+Out of Sight
+
+Men of Means
+
+Out of Mind
+
+The Long Kiss Goodnight
+
+Out of Sight II
+
+Men of Means
+
+Out of Mind 3
+
+The Guns of Mincey
+
+The Thin Red Line
+
+Men With Guns
+
+Men With Guns 2
+
+Men With Nerve
+
+Midnight Run
+
+Midnight Run II
+
+Midnight Run III
+
+Midnight Run 4
+
+The Untouchables
+
+Master Ninja I
+
+Master Ninja II
+
+Midnight Ninja III
+
+Minnie And Moskowitz
+
+Master Ninja Four
+The Karate Kid
+
+Westworld
+
+The Towering Inferno
+The Towering Inferno II
+
+Tarzan and the Lost City
+
+The Godfather: Part III
+
+The Thin Red Line
+Men of Means
+
+Plunkett & MaCleane
+
+Plunkett & MaCleane 2
+
+Operation Dumbo Drop
+
+Operation Dumbo Drop II
+
+Operation Dumbo Drop III
+
+Operation Dumbo Drop IV
+
+Operation Dumbo Drop V
+
+Operation Dumbo Drop VI
+
+Operation Dumbo Drop VII
+
+Operation Dumbo Down Below
+
+Fallen Angels
+
+Alien: Resurrection
+
+Blood, Guts, Bullets and Octane
+
+Run Lola Run
+G.I. Jane
+
+The French Connection
+
+The Saint
+W. Killeen
+
+Run High!
+
+Fire Down Below
+
+Hard Rain
+
+Hard Rain 2
+
+Hard Rain 3: Sea of Cortez
+The Big Race
+
+Double Team
+
+Crossfire
+
+The Untouchables
+
+Double Team 2
+
+Striking Distance
+
+Starship Troopers
+
+Saving Private
+
+======== SAMPLE 1 ========
+
+"The Untouchables"
+Escape from New York
+The Thomas Crown Affair
+Die Hard
+Army of Darkness
+The Untouchables II
+The Untouchables III: No Turning Back
+The Crow: City of Angels
+The Power
+Alien³
+The Omega Code
+American Strays
+Rush Hour Part II
+The Poseidon Adventure
+Sanjuro
+Star Trek: First Contact
+Star Trek VI: The Undiscovered Country
+Star Trek V: The Final Frontier
+Star Trek III: The Search for Spock
+Star Trek IV: The Voyage Home
+Batman Returns
+Time Tracers
+Air Force One
+Steel
+Tomorrow Never Dies
+Men in Black
+Time Tracers 2
+Time Tracers 3: Iron Eagle
+Time Tracers 4: The Jewel of the Nile
+Men With Guns
+The Glimmer Man
+Tron
+Indiana Jones and the Temple of Doom
+Iron Eagle
+The Man in the Iron Mask
+The Part II Karate Kid
+The Karate Kid III: Iron Fist
+A Fist Impact
+The Part III Karate Kid
+The Last of the Mohicans
+The Omega Code
+Blood, Guts, Bullets and Octane
+Godzilla
+The Godzilla Monuments Project
+Godzilla: Rise of the White Dog
+Godzilla
+King Kong vs. Godzilla
+King Kong
+King Kong Lives
+The Emerald Forest
+The Emerald Forest 2
+The Emerald Forest 3
+King Kong vs. Godzilla
+King Kong Lives
+King Kong Monarchy
+King Kong
+King Kong Mystery
+King Kong's First Strike
+The Emerald Forest 2
+Mars Attacks! Part II
+Men of Means
+Smilla's Sense of Snow
+The Poseidon Adventure
+Smilla's Sense of Snow 2
+The Poseidon Adventure III: The Emerald City
+The Thin Red Line
+Tokyo Fist
+Tokyo Fist 2
+Tokyo Fist 3
+Tokyo Fist 4
+Tokyo Fist 5
+Tokyo Fist 6
+Tokyo Fist 7
+Tokyo Fist 8
+Tokyo Fist 9
+Tokyo Fist 10
+Tokyo Fist 11
+Tokyo Fist 12 Takedown! De!! Anaconda!
+The Kid's Sane
+The Boat
+The Boat 2
+Tequila Sunrise
+Fire Down Below
+The Lawnmower Man
+The Boat Veterans
+Heartbreak Ridge
+Fire Down Below
+The Jewel of the Nile
+Someone to Watch Over Me
+Highlander
+Highlander 2
+Highlander 3
+Highlander IV: The Voyage Home
+The French Connection
+Deep Rising
+Soldier
+Soldier 2
+The Thin of Red Line
+Striking Distance
+Spawn
+The Transformers: The Movie
+Star Wars: Episode I - The Phantom Menace
+The Force, Part II
+The Force, Part III
+The Force, Part IV - Return of the Jedi
+Knock Off 6
+Knock Off 7
+Knock Off 8
+Knock On Kill!
+The Impossible Object
+Turbo: Power 98
+Breakdown
+Beverly Hills Ninja
+King of New York
+Beverly Hills Ninja 2
+King of New York
+Breakdown
+Cyrano De Guzman
+The Presidio
+3 Ninjas: High Noon On Mega Mountain
+Alligator
+Palookaville
+Highlander II
+Heartbreak Ridge
+Hard-Boiled
+No Escape
+Alligator 2
+Alligator 3
+Palookaville
+Battle for the Planet of the Apes
+The Abyss
+Planet of the Apes
+The Corruptor
+Planet of the Apes
+The Devil's Own
+Mars Attacks!
+The Corruptor 2
+The Corruptor 3
+Planet of the Apes
+Avalanche
+Avalanche
+The Corruptor's Apprentice
+Thelma & Louise Donnellan
+Escape from the Crystal Skull
+Saving Private Ryan
+The Thin Red Line
+Firestorm
+Hot Shots! Part III
+The Quest
+Deep Rising
+The Replacement Killers
+Firestorm
+Firestorm 2
+Sanjuro
+Firestorm 3
+Sanjuro 2
+The Presidio
+The Replacement Killers
+The Godfather: Part III
+The Glimmer Man
+The Replacements
+The Godfather: Part II
+The Presidio
+
+The Replacement Killers
+The Replacements
+The Godfather
+
+The Glimmer Man
+
+The Replacement Killers
+The Godfather II
+
+The Godfathers
+
+Men of Means
+The Part II Karate Kid
+
+The Replacement Killers
+
+The Part III Karate Kid
+
+The Godfather: First Blood Part II
+
+The Karate Kid
+The Replacement Killers
+
+The Karate Kid 3
+ - The African Queen
+Lethal Weapon 4
+Sanjuro
+Soldier
+Lethal Weapon
+The Replacement Killers
+Lethal Weapon 2
+Lethal Weapon 3
+Lethal Weapon 4
+The Abyss
+Chill Factor
+Condorman
+The Negoti
+
+[25 | 2667.17] loss=0.62 avg=1.40
+======== SAMPLE 1 ========
+
+I started reading on the subway a couple of years ago, and I noticed that the most popular fare-paying service has very little in common with real subway travel. The trains are actually very boring: the trains are actually quite fast and the stations are filled with people rushing around looking for one another. It's an uncomfortable way to spend your time, but it's also great fun.
+
+But you shouldn't live in Paris unless you're in the middle of a movie: A French Connection movie, in which three French police officers (played by French people) try to kidnap a French politician.
+
+In the movie, the only way you're going to get away with it is if you kill the French first. The French don't even let the French off the hook, and the mayor of Paris is furious and demands your money.
+
+But the movie has an element of suspense: the French actually let the politician off the hook, so the movie actually begins. The police have to come up with a plan, and instead of being able to do anything about it, the plan is to kill the French.
+
+But the plan doesn't work: you only hurt himself.
+
+The French actually get more brutal: after the mayor of Paris, Alain Juppe, goes to war with the French, the French government turns a blind eye and starts funding the entire French army to take over from the French in the second French World War.
+
+The French government decides to pay them back, and Juppe, who has been stationed in New York City since the war began, heads to Detroit to try to rally the French to the defense of their nation. It all culminates in a French hostage situation and the death of another American citizen in a Dallas church, where the government takes him hostage.
+
+But you can't live without your favorite French TV series, right?
+
+The Dirty Dozen
+
+Butch Cassidy and the Sundance Kid
+
+Ben-Hur
+
+Indiana Jones and the Temple of Doom
+
+Iron Eagle
+
+Tarzan the Fearless
+
+Tequila Sunrise
+
+A City Called Rockhurst
+
+The Fifth Element
+
+The Lost World: Jurassic Park
+
+Indiana Jones and the Temple of Doom
+
+The Untouchables
+
+Men of Means
+
+The African Queen
+
+Indiana Jones and the Miracle On 34th No. 1
+
+The World Is Not Enough
+
+Indiana Jones and the Sorcerer
+
+Knighted
+
+The Avengers
+
+Star Wars: Episode I – The Phantom Menace
+
+Young Guns
+
+Young Guns II
+
+Young Guns III
+
+Young Guns IV: The Phantom Menace
+
+Power 98
+
+Power 98 2
+
+Power 98 3
+
+Power 98 4
+
+Young Guns
+
+Young Guns II
+
+Young Guns III
+
+Young Guns IV: The Phantom Menace The Thing
+
+The Wicker Man
+
+Best of the Best 3: No Turning Back
+
+Best of the Best 5
+
+Best of the Best 6
+
+Best of the N.F.L.
+
+Knock Off Manhattan
+
+Die Hard
+
+The Long Kiss Goodnight
+
+Best Men
+
+Ben-Hur: Bloodline
+
+Ben-Hur II
+
+Ben-Hur 3
+
+Ben-Hur 4
+
+Ben-Hur 5
+
+Ben-Hur 6
+
+Ben-Hur 7
+
+Ben-Hur 8
+
+Ben-Hur 9
+
+Ben-Hur 10
+
+Ben-Hur 11
+
+Ben-Hur 12
+
+Ben-Hur 13
+
+Ben-Hur 14
+
+Ben-Hur 15
+
+Ben-Hur 16
+
+Ben-Hur 17
+
+Ben-Hur 18
+
+Ben-Hur 19
+
+Ben-Hur 20
+
+Ben-Hur 21
+
+Ben-Hur 22
+
+Ben: Full Metal Jacket
+
+Hard Target
+
+Jumpin' Jack Flash
+
+Best Men in Black
+
+Master Ninja I
+
+Master Ninja II
+
+Hard Rain
+In Too Deep
+
+Johnny 100 Pesos
+The Big Trees
+
+Men With Guns
+Clear Channel
+Blood, Guts, Bullets and Octane
+Fire Down Below
+
+Buffalo 66
+The Kid
+The Big Trees
+A Perfect World
+
+American Strays
+Money Talks
+Young Guns
+Men With Guns: High Five
+
+American Strays II
+Double Jeopardy
+The Big Trees
+Double Jeopardy III
+
+Double Jeopardy Games
+Seven Samurai
+Chopping Mall Cop
+Seven Samurai 2
+Chopping Mall Cop 3
+
+Seven Samurai 4: The Lost Legacy
+Running Scared
+Best Men, Women and Gents
+One Tough Cop
+One Tough Cop 2
+One Tough Cop 3: The Donner
+One Tough Cop 4: The Guns of Navarone
+One Tough Cop V: the Willow
+The Mod Squad
+American Strays
+Payback
+The Mod Squad
+Striking Distance
+
+
+======== SAMPLE 1 ========
+ in the Line of Fire
+Heaven & Earth
+Buffalo 66
+Face/Off
+Die Hard
+Star Wars: Episode IV - A New Hope
+The Longest Day
+Turbo: A Power Rangers Movie
+Bulletproof
+Master Ninja I
+Master Ninja II
+Smillachos
+The Stranger
+Toys
+Beverly Hills Ninja
+Evil Dead II
+Toys
+Highlander
+The Game
+Lost in Space
+Evil Dead III
+The Serpent
+The Stranger
+Steel
+Blood, Guts, Bullets and Octane
+The Arrival
+The Last of the Mohicans
+Lost in Space
+Deep Impact
+The Sea Wolves
+The Pope of Greenwich Village
+The Mod Squad
+Ben-Hur
+Mission: Impossible
+The Devil's Own
+Fled
+Speed
+Hard Rain
+Nighthawks
+The Long Kiss Goodnight
+Outback Steak
+Stag
+The Glimmer Man
+Blood, Guts, Bullets and Octane
+The Arrival
+The War of the Worlds
+Grab It, Jack White
+The Terminator
+Glory
+Lethal Weapon 4
+The African Queen
+Men With Guns
+The Peacemaker
+The Killer
+The Towering Inferno
+Breakdown
+The Towering Inferno
+The Sea Wolves
+Knock Off
+The Man in the Iron Mask
+The Player's Club
+Lost in Space
+In Too Deep
+Judgment Night
+Legion
+Operation Dumbo Drop
+Man Bites Dog
+Mariachi, El
+Mariachi's Sense of Snow
+Last Man Standing
+The Shooter
+The Long Kiss Goodnight
+Bulletproof
+Lethal Weapon 4
+Lethal Weapon 3
+The African Queen
+Lethal Weapon 2
+The Terminator
+The Room with Remains
+The Pope of Greenwich Village
+The Pope of New York
+The Wrestler
+Zero Kelvin
+Zero Kelvin II
+Stag
+The Weapon in the World
+The Mod Squad
+The Social Network
+The Three Musketeers
+Alligator
+Westworld
+Beverly Hills Ninja
+Godzilla
+Beverly Hills Ninja 2
+Godzilla
+Beverly Hills Ninja 3
+Beverly Hills Ninja 4
+The Presidio
+The Shooter
+The Terminator
+The Power of Love
+The Rock
+The Supercop
+Cop 60
+Speed
+Hard Target
+Hard Target 2
+Hard Target 3
+The Deadly D-Day
+Terminator 2: Judgment Day
+Tough and Deadly
+Police Story 4: Project S
+Plunkett & MaCleane
+The Big Hit
+Six-String Samurai
+Seven Samurai
+Seven Samurai 2
+The Big Hit 3
+The Leftovers
+A View to a Kill
+The Pope of Greenwich Village
+I Went Down
+Knock Off
+Hard Target
+
+Hard Target 2
+
+Hard Target 3 – Part II
+
+Knock Off
+Hard Target 3 – Part III
+
+Hard Target 4
+
+Knock Off 2 – No Mercy
+Payback
+The Arrival
+Payback
+The Arrival 2
+Payback 3 – The Silver Linings On The Hudson
+Payback 2 – Trust Me, It's Too Late
+Westworld
+Spawn
+Spawn
+The Handmaid's Tale
+The Handmaid's Chronicles
+Blood, Guts, Bullets and Octane
+The Dirty Dozen
+The Untouchables
+G.I. Jane
+Beverly Hills Ninja
+Deep Impact
+Beverly Hills Ninja 2
+Beverly Hills Ninja 3
+Double Team
+Anaconda
+Anaconda
+Con Air
+Con Air 2
+The Hunt for Red October
+The Peacemaker
+The Hunt for Red October Deception
+Striking Distance
+Extremely Loud
+The Longest Day
+A Hard-Run
+Out of Water
+Time Tracers
+Time Tracers 2
+Time Tracers 3: Speed One
+Tomorrow Never Dies
+The Spiders
+The Stranger
+The Spiders of Virtue
+Plunkett & MaCleane
+Striking Detail
+True Romance
+Tribal Wars
+U Turn
+Three Samurai
+American Strays
+The Fifth Element
+The Lost World: Jurassic Park
+Firestorm
+Superman
+Superman II
+Superman III
+The Golden Child
+The War of the Worlds
+The War of the Worlds II
+The World Is Not Enough
+Running Scared
+Titanic
+Titanic 2
+Titanic 3: Titan Drop
+Titanic 4
+The Turning
+The Jackal
+Blood, Guts, Bullets and Octane
+The Dirty Dozen
+The Mod Squad
+Evil Dead II
+The Notorious 1989
+Die Hard 2
+Die Hard 3
+The Lawnmower Man
+The Mod Squad
+Evil Dead Rising
+Men of Means
+The Ritz-Carlton
+Ritz-It Casino
+The Matrix
+Conan the Barbarian
+Evil Dead Rising 2
+Conan the Barbarian 3
+Conan the Barbarian 4
+Conan the Barbarian's First Strike
+Face/
+
+[30 | 3156.21] loss=0.22 avg=1.20
+Saving checkpoint/run action_movies.txt/model-30

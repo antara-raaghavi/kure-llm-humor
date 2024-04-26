@@ -1,0 +1,22 @@
+
+[notice] A new release of pip available: 22.3.1 -> 24.0
+[notice] To update, run: pip install --upgrade pip
+2024-04-24 18:06:13.229616: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-04-24 18:06:13.279553: I external/local_tsl/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2024-04-24 18:06:15.654334: I external/local_tsl/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2024-04-24 18:06:23.591287: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-04-24 18:06:38.174486: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-04-24 18:07:06.692466: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:388] MLIR V1 optimization pass is not enabled
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  6.90it/s]100%|██████████| 1/1 [00:00<00:00,  6.89it/s]
+WARNING:tensorflow:From /n/home04/antara/myenv/lib/python3.10/site-packages/tensorflow/python/training/saver.py:1068: remove_checkpoint (from tensorflow.python.checkpoint.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+Traceback (most recent call last):
+  File "/n/home04/antara/kure-llm-humor/experiments1.py", line 27, in <module>
+    gpt2.generate(sess)
+  File "/n/home04/antara/myenv/lib/python3.10/site-packages/gpt_2_simple/gpt_2.py", line 450, in generate
+    enc = encoder.get_encoder(checkpoint_path)
+  File "/n/home04/antara/myenv/lib/python3.10/site-packages/gpt_2_simple/src/encoder.py", line 109, in get_encoder
+    with open(os.path.join(checkpoint_path, 'encoder.json'), 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/run1/encoder.json'
