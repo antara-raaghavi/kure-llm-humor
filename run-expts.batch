@@ -13,6 +13,7 @@ python3 -m venv ~/myenv
 source ~/myenv/bin/activate
 # pip install --no-index --upgrade pip
 # pip install --no-index -r requirements.txt
-pip install gpt_2_simple
+# pip install gpt_2_simple
 
-python3 -u experiments1.py ${CONFIG_FILE}
+# python3 -u experiments1.py ${CONFIG_FILE}
+python3 -u experiments2.py ${CONFIG_FILE}
