@@ -10,7 +10,7 @@ def sample_entries(input):
     with open(input, 'r') as file:
         entries = file.read().splitlines()
 
-    filtered = [entry for entry in entries if len(entry) <= 35 and not (entry.endswith("<FLAG>") or entry.endswith("=="))]
+    filtered = [entry for entry in entries if ((1 <= len(entry)) and (len(entry) <= 35)) and not (entry.endswith("<FLAG>") or entry.endswith("=="))]
     # if len(filtered) >= n_samp:
     #     sampled_entries = random.sample(filtered, n_samp)
     #     with open(output, 'w') as output_file:
