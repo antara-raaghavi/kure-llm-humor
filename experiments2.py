@@ -1,12 +1,14 @@
 import sys
-n_steps = 30
+import matplotlib.pyplot as plt
+n_steps = 60
 file_name = sys.argv[1]
+perc_list = []
 
-for i in range(3, n_steps, 2):
-    output_path = f'samples/run {file_name} 26Apr/samples-{i}'  
-    clean_output_path =  f'samples/run {file_name} 26Apr/CLEAN-samples-{i}'  
+for i in range(2, n_steps):
+    output_path = f'samples/run {file_name} FOR_ANALYSIS/samples-{i}'  
+    clean_output_path =  f'samples/run {file_name} FOR_ANALYSIS/CLEAN-samples-{i}'  
     input_path = file_name
-    final_output_path = f'samples/run {file_name} 26Apr/PROCESSED-samples-{i}'  
+    final_output_path = f'samples/run {file_name} FOR_ANALYSIS/PROCESSED-samples-{i}'  
     seen = set()
     inputs = set()
     cleaned = []
@@ -37,4 +39,16 @@ for i in range(3, n_steps, 2):
                 f4.write(line + ' <FLAG>\n')  
             else:
                 f4.write(line + '\n')
+        n = ctr/total
+        perc_list.append(n)
         f4.write("Percentage present in input file: " + str(ctr/total))
+
+
+#plot percentage of repeats
+
+
+plt.figure(figsize=(12, 6))
+plt.plot(list(range(len(perc_list))), perc_list, marker='o', linestyle='-', color='b')
+plt.savefig("perc-repeats-col-an.png")
+
+

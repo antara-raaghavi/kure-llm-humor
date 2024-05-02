@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/n/home04/antara/kure-llm-humor/experiments2.py", line 17, in <module>
+    with open(output_path, 'r', encoding='utf-8') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'samples/run romance_movies.txt 26Apr/samples-1'
