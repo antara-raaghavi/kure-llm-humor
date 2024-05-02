@@ -2,8 +2,8 @@
 #SBATCH -p shared
 #SBATCH --mem=12GB
 #SBATCH -t 1-00:00
-#SBATCH -o rsamp_%j.out # Standard output
-#SBATCH -e rsamp_%j.err # Standard error
+#SBATCH -o rsamp2_%j.out # Standard output
+#SBATCH -e rsamp2_%j.err # Standard error
 
 CONFIG_FILE=$1
 
@@ -15,6 +15,7 @@ source ~/myenv/bin/activate
 # pip install --no-index -r requirements.txt
 # pip install gpt_2_simple
 # pip install matplotlib
+# pip install numpy
 
 # python3 -u experiments1.py ${CONFIG_FILE}
 # python3 -u experiments2.py ${CONFIG_FILE}
